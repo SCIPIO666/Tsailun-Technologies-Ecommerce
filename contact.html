@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <LINK rel="stylesheet" href="STYLE.CSS">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <style>
+       @import url(softwares.css);
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fcab21f617.js" crossorigin="anonymous"></script>
+    <title>Contact Us</title>
+</head>
+<body>
+<header class="main-header">
+  <!-- Promo / campaign bar -->
+  <div class="campaign1" role="status" aria-live="polite">
+    <p>
+      <span><i class="fa-solid fa-phone"></i></span>
+      <a href="tel:+254784289162">+254 784 289 162</a>
+      Nairobi, Kenya
+      <span><i class="fa-solid fa-truck"></i></span> free delivery Kenya
+      <span><i class="fa-solid fa-shield-halved"></i></span> 1 year warranty
+    </p>
+  </div>
+
+  <!-- Top bar -->
+  <div class="search-and-account2">
+    <div id="logo-plus-search" class="search-and-account2-child">
+      <a href="index.html" class="site-logo" aria-label="tsailun technologies home">
+        <img src="IMAGES/lenovo-logo.avif" alt="tsailun technologies logo">
+      </a>
+
+      
+      <!-- proper form for search -->
+      <form id="search-panel" class="search-and-account2-child" role="search" aria-label="Site search" action="/search" method="GET">
+        <label for="site-search" class="visually-hidden">Search products</label>
+        <input id="site-search" name="q" type="search" placeholder="Search" aria-label="Search the site">
+        <button type="submit" aria-label="Submit search">
+          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        </button>
+      </form>
+
+      <div id="shopping-cart" class="search-and-account2-child">
+        <button type="button" aria-label="View shopping cart">
+          <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <div id="user-account-header" class="search-and-account2-child">
+        <button type="button" aria-label="User login">
+          <i class="fa-solid fa-user" aria-hidden="true"></i>
+        </button>
+        <p>Login</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav class="main-header nav3 sticky-nav" role="navigation" aria-label="Main navigation">
+  <!-- Mobile menu button -->
+  <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="nav-list" aria-label="Open menu">
+    ☰ Menu
+  </button>
+
+    <ul class="nav-list" id="nav-list">
+        <li class="nav-item"><a href="INDEX.HTML" class="nav-link">Home</a></li>
+        <li class="nav-item nav-dropdown">
+            <a href="laptops.html" class="nav-link">Laptops <span aria-hidden="true">▼</span></a>
+            <ul class="dropdown-menu" id="laptopsDropdownMenu" hidden>
+                <li><a href="laptops.html">All Laptops</a></li>
+                <li><a href="laptops-under20k.html">Under 20k</a></li>
+                <li><a href="macbooks.html">Macbooks</a></li>
+                <li><a href="refurbished-laptops.html">Refurbished Laptops</a></li>
+                <li><a href="gaming-laptops.html">Gaming Laptops</a></li>
+            </ul>
+        </li>
+        <li class="nav-item"><a href="softwaress.html" class="nav-link">Softwares</a></li>
+        <li class="nav-item"><a href="desktops.html" class="nav-link">Desktops</a></li>
+        <li class="nav-item"><a href="accessories.html" class="nav-link" aria-current="page">Accessories</a></li>
+        <li class="nav-item"><a href="iphones.html" class="nav-link">iPhones</a></li>
+        <li class="nav-item"><a href="repairs.html" class="nav-link">Repair</a></li>
+    </ul>
+</nav>
+ <div class="heroe-software">
+        <img src="IMAGES/today.avif" alt="Contact Us hero image" class="heroe-software-children">
+        <div class="heroe-software-children">
+            <h2>Contact Us</h2>
+            <p class="software-description">We'd love to hear from you. Get in touch with our team for support, questions, or inquiries.</p>
+        </div>
+    </div>
+<main>
+    
+    <section class="contact-section">
+        <div class="contact-info">
+            <h3>Our Contact Information</h3>
+            <p><strong>Address:</strong> Imenti House, Basement Shop No. 14, Tom Mboya Street, Nairobi, Kenya</p>
+            <p><strong>Email:</strong> <a href="mailto:tsailunenterprises@gmail.com">tsailunenterprises@gmail.com</a></p>
+            <p><strong>Phone:</strong> <a href="tel:+254784289162">+254 784289162</a></p>
+            <p><strong>Business Hours:</strong> Monday - Saturday: 9:00 AM - 6:00 PM</p>
+            <div class="social-links">
+                <a href="#" class="social-icon" ">Facebook</a> 
+                <a href="#" class="social-icon" >Instagram</a>
+                <a href="#" class="social-icon" >Twitter</a>
+            </div>
+        </div>
+
+        <div class="contact-form-container">
+            <h3>Send us a message</h3>
+            <form class="filter-form" action="/submit-contact" method="POST">
+                <div class="filter-category">
+                    <label for="contact-name" >Name:</label>
+                    <input type="text" id="contact-name" name="name" placeholder="Your Name" class="filter-input" size="30" maxlength="50" required>
+                </div>
+                <div class="filter-category">
+                    <label for="contact-email" >Email:</label>
+                    <input type="email" id="contact-email" name="email" placeholder="Your Email" class="filter-input" size="30" maxlength="75" required>
+                </div>
+                <div class="filter-category">
+                    <label for="contact-message" >Message:</label>
+                    <textarea id="contact-message" name="message" rows="6" cols="30" placeholder="Your Message" class="filter-input" maxlength="500" required></textarea>
+                    <button type="submit" class="filter-button filter-button--apply" id="send-message">Send Message</button>
+                </div>
+                
+            </form>
+        </div>
+    </section>
+</main>
+<footer class="main-footer">
+    <div class="footer-content">
+        <div class="footer-section footer-about">
+            <h3>Tsailun Technologies</h3>
+            <p>Quality refurbished laptops and custom builds in Nairobi. Smart tech choices for a smarter planet.</p>
+            <p>Located at Imenti House, Basement Shop No. 14, Tom Mboya Street, Nairobi.</p>
+        </div>
+        <div class="footer-section footer-links">
+            <h3>Quick Links</h3>
+            <ul class="footer-list">
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="warranty.html">Warranty & Returns</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+            </ul>
+        </div>
+        <div class="footer-section footer-nav">
+            <h3>Shop Categories</h3>
+            <ul class="footer-list">
+                <li><a href="laptops.html">Laptops</a></li>
+                <li><a href="softwaress.html">Softwares</a></li>
+                <li><a href="desktops.html">Desktops</a></li>
+                <li><a href="accessories.html">Accessories</a></li>
+                <li><a href="iphones.html">Refurbished iPhones</a></li>
+                <li><a href="repairs.html">Diagnosis And Repair</a></li>
+            </ul>
+        </div>
+        <div class="footer-section footer-contact">
+            <h3>Get in Touch</h3>
+            <p>Email: <a href="mailto:tsailunenterprises@gmail.com">tsailunenterprises@gmail.com</a></p>
+            <p>Phone: <a href="tel:+254784289162">+254 784289162</a></p>
+            <div class="social-links">
+                <a href="#" class="social-icon">Facebook</a> 
+                <a href="#" class="social-icon">Instagram</a>
+                <a href="#" class="social-icon">Twitter</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Your Tsailun Technologies. All rights reserved.</p>
+    </div>
+</footer>
+<script>
+window.addEventListener('DOMContentLoaded', function() {
+    var nav = document.querySelector('.sticky-nav');
+    var stickyOffset = nav.offsetTop;
+    function onScroll() {
+        if (window.scrollY > stickyOffset) {
+            nav.classList.add('is-sticky');
+        } else {
+            nav.classList.remove('is-sticky');
+        }
+    }
+    window.addEventListener('scroll', onScroll);
+    onScroll(); 
+});
+</script>
+</body>
+</html>

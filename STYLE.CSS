@@ -1,0 +1,1824 @@
+/*
+|--------------------------------------------------------------------------
+| 1. Base / Reset Styles (_base.css or _reset.css)
+|--------------------------------------------------------------------------
+| A foundational reset to ensure consistent rendering and base typography.
+*/
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Important for consistent box model */
+    font-size: 16px; /* Base font size, 1rem = 16px */
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit; /* All elements inherit box-sizing from html */
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Your chosen body font */
+    margin: 0;
+    padding: 0; /* Ensures no default padding on body */
+    background-color: #121212; /* Deepest charcoal/near black background */
+    color: #E0E0E0; /* Main body text color - off-white for readability */
+    font-weight: 400; /* Standard font weight for body text */
+    font-size: 1rem; /* Equivalent to 16px */
+    line-height: 1.6; /* For readability */
+    min-height: 100vh; /* Ensure body takes at least full viewport height */
+    display: flex; /* Use flex to manage main content layout if needed */
+    flex-direction: column; /* Allows footer to stick to bottom */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    color: #FFFFFF; /* Pure white for headings to make them stand out */
+    margin-top: 1.5em; /* Space above headings */
+    margin-bottom: 0.8em; /* Space below headings */
+}
+
+h1 {
+    font-size: 2.5rem; /* 2.5 * 16px = 40px */
+    font-weight: 700; /* Bold for main titles */
+}
+
+h2 {
+    font-size: 2rem; /* 2 * 16px = 32px */
+    font-weight: 600; /* Semi-bold for sub-headings */
+}
+
+h3 {
+    font-size: 1.5rem; /* 1.5 * 16px = 24px */
+    font-weight: 600; /* Semi-bold for smaller headings */
+}
+
+p {
+    font-size: 1rem; /* 1 * 16px = 16px */
+    margin-bottom: 1em; /* Space below paragraphs */
+}
+
+/* Base Link Styling */
+a {
+    color: #00BCD4; /* Vibrant Cyan/Electric Blue for links */
+    text-decoration: none; /* Remove the default underline */
+    transition: color 0.3s ease; /* Smooth color change on hover */
+}
+
+a:hover {
+    color: #FFFFFF; /* Links turn white on hover for emphasis */
+}
+
+/*
+|--------------------------------------------------------------------------
+| 2. Utilities / Helpers (_utilities.css)
+|--------------------------------------------------------------------------
+| Small, single-purpose classes.
+*/
+.hidden { display: none !important; }
+.text-secondary {
+    color: #B0B0B0; /* Less prominent text, like meta-info */
+}
+
+.text-tertiary {
+    color: #757575; /* Very subtle text, like placeholders or footnotes */
+}
+
+/*
+|--------------------------------------------------------------------------
+| 3. Components (_components.css)
+|--------------------------------------------------------------------------
+| Reusable UI elements like buttons, cards, forms.
+*/
+
+/* Buttons */
+.btn-primary, button.primary { 
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #00BCD4; /* Vibrant Cyan/Electric Blue */
+    color: #FFFFFF;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    text-decoration: none; /* For anchor tags acting as buttons */
+}
+
+.btn-primary:hover, button.primary:hover {
+    background-color: #00A6B2; /* Slightly darker blue on hover */
+}
+
+.btn-secondary, button.secondary {  
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: transparent;
+    color: #00BCD4;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    border: 2px solid #00BCD4;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn-secondary:hover, button.secondary:hover {
+    background-color: #00BCD4;
+    color: #FFFFFF;
+}
+
+/* Cards (for product listings, services, etc.) */
+.card, .heroe-child { /* Applying card styles to heroe-child as well */
+    background-color: #1E1E1E; /* Slightly lighter dark grey */
+    border: 1px solid #333333; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* Recommended softer shadow */
+}
+
+/* Forms */
+input[type="search"],
+input[type="text"],
+input[type="number"],
+input[type="range"],
+input[type="email" ],
+select,
+textarea {
+    background-color: #2C2C2C; /* Darker background for input fields */
+    border: 1px solid #333333; /* Subtle border */
+    color: #E0E0E0; /* Text color inside input */
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    outline: none; /* Remove default outline */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="checkbox"],
+input[type="radio"],
+input[type="email" ],
+option
+{
+ border: solid .5px #00BCD4 ;
+}
+
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email" ]:focus,
+select:focus,
+textarea:focus {
+    border-color: #00BCD4; /* Accent color on focus */
+    box-shadow: 0 0 0 2px rgba(0, 188, 212, 0.3); /* Subtle glow on focus */
+}
+
+/* Specific styling for filter inputs */
+.filter-input {
+    margin-right: 5px;
+    /* Custom checkbox/radio styling could go here for better aesthetics */
+    appearance: none; /* Remove default browser styling */
+    width: 18px;
+    height: 18px;
+    border: 2px solid #333333;
+    border-radius: 3px; /* Slightly rounded for checkboxes */
+    background-color: #2C2C2C;
+    cursor: pointer;
+    position: relative;
+    top: 3px; /* Adjust vertical alignment */
+}
+
+.filter-input:checked {
+    background-color: #00BCD4; /* Accent color when checked */
+    border-color: #00BCD4;
+}
+
+.filter-input[type="radio"] {
+    border-radius: 50%; /* Make radios round */
+}
+
+.filter-input[type="checkbox"]:checked::after {
+    content: '\2713'; /* Checkmark symbol */
+    color: #FFFFFF;
+    font-size: 14px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.filter-input[type="radio"]:checked::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| 4. Layout & Structure (_layout.css)
+|--------------------------------------------------------------------------
+| Defines the overall page structure and grid systems.
+*/
+
+/* =========================
+   MAIN HEADER LAYOUT
+========================= */
+.main-header {
+    background-color: #1E1E1E;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #333333;
+}
+
+/* =========================
+   CAMPAIGN BAR
+========================= */
+.campaign1 {
+    background-color: #00BCD4;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 8px 20px;
+    font-size: 0.9em;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap; /* stack on small screens */
+}
+
+.campaign1 p {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.campaign1 a {
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: text-decoration 0.3s ease;
+}
+
+.campaign1 a:hover {
+    text-decoration: underline;
+}
+
+.campaign1 i {
+    color: #FFFFFF;
+    font-size: 1.1em;
+}
+
+/* No wrap on larger screens */
+@media (min-width: 640px) {
+    .campaign1 {
+        flex-wrap: nowrap;
+        flex-direction: row;
+    }
+}
+
+/* =========================
+   LOGO + SEARCH + CART + LOGIN
+========================= */
+.search-and-account2 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo-plus-search {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    flex: 1 1 100%;
+}
+
+/* =========================
+   SITE LOGO
+========================= */
+.site-logo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.site-logo:hover {
+    color: #00BCD4;
+}
+
+.site-logo img {
+    max-height: 40px;
+    width: auto;
+}
+
+/* =========================
+   SEARCH PANEL
+========================= */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0);
+  white-space: nowrap; border: 0;
+}
+
+#search-panel {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex: 1 1 auto;
+    min-width: 180px;
+}
+
+#search-panel input[type="search"] {
+    flex: 1 1 auto;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    background: #fff;
+    font-size: 0.95rem;
+}
+
+#search-panel button {
+    padding: 10px 15px;
+    background-color: #00BCD4;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#search-panel button:hover {
+    background-color: #00A6B2;
+}
+
+/* =========================
+   CART + LOGIN
+========================= */
+.search-and-account2-child {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #E0E0E0;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.search-and-account2-child i {
+    font-size: 1.3em;
+    color: #00BCD4;
+}
+
+.search-and-account2-child p {
+    margin: 0;
+}
+
+/* =========================
+   RESPONSIVE BEHAVIOR
+========================= */
+
+/* Mobile (<640px): stack vertically */
+@media (max-width: 639px) {
+    #logo-plus-search {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    #search-panel {
+        width: 100%;
+    }
+
+    #shopping-cart, #user-account-header {
+        justify-content: center;
+        width: 100%;
+    }
+    #search-panel button {
+    padding: 10px 15px;
+    background-color: #00BCD4;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+}
+
+/* Tablet (640px–1023px): logo left, search full width below */
+@media (min-width: 640px) and (max-width: 1023px) {
+    #logo-plus-search {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 15px;
+    }
+
+    .site-logo {
+        flex: 0 0 auto;
+    }
+
+    #search-panel {
+        flex: 1 1 100%;
+        order: 2;
+    }
+
+    #shopping-cart, #user-account-header {
+        flex: 0 0 auto;
+        order: 3;
+    }
+    #search-panel button {
+    padding: 10px 15px;
+    background-color: #00BCD4;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+}
+
+/* Desktop (≥1024px): logo left, search middle, cart + login right */
+@media (min-width: 1024px) {
+    #logo-plus-search {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    .site-logo {
+        flex: 0 0 auto;
+    }
+
+    #search-panel {
+        flex: 1 1 auto;
+        order: 2;
+    }
+
+    #shopping-cart, #user-account-header {
+        flex: 0 0 auto;
+        order: 3;
+    }
+    #search-panel button {
+    padding: 10px 15px;
+    background-color: #00BCD4;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+}
+/*fixed shopping cart*/
+@media (max-width: 640px) {
+  #shopping-cart button {
+      position: fixed;
+    top: 10px;
+    right: 15px;
+    padding: .5rem .75rem;
+    border: 1px solid #00BCD4;
+  background: #1E1E1E;
+  color: #E0E0E0;
+  border-radius: .5rem;
+    margin: .5rem auto;
+  cursor: pointer;
+  z-index: 6000;
+  margin-bottom: 1rem;
+  }
+}
+
+/* Main Navigation */
+.nav3 {
+    height: fit-content;
+    margin: 0 auto;
+    width: fit-content;
+  border-radius: 0.5em;
+  border: 2px solid #00BCD4;
+  /*padding:.7rem;*/
+  flex-grow: 1;
+  position: sticky;
+  top: 0;
+  z-index: 4000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+gap: .3em;
+
+}
+
+/* Items */
+.nav-item {
+  position: relative;
+ margin: 5px; 
+  
+  
+}
+
+.nav-link {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  background: #00BCD4;
+  color: #FFFFFF;
+  border: 2px solid #00BCD4;
+  border-radius: 0.5em;
+  padding: 0.4rem ;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;*/
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background-color: #00A6B2;
+  border-color: #00A6B2;
+  color: #FFFFFF;
+}
+
+/* Dropdown Menu */
+.nav-dropdown { position: relative; }
+
+.dropdown-menu {
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  background-color: #1E1E1E;
+  border: 1px solid #333333;
+  border-radius: 5px;
+  position: absolute;
+  top: 100%; /* sits right below parent */
+  left: 0;
+  min-width: 180px;
+  z-index: 3000;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  display: none;
+}
+
+/* Desktop hover dropdown */
+.nav-dropdown:hover .dropdown-menu {
+  display: block;
+  box-shadow: 0 12px 25px rgba(0, 188, 212, 0.2);
+  font-weight: 500;
+  color: #FFFFFF;
+  border: 2px solid #00BCD4;
+  border-radius: 0.5em;
+}
+
+.dropdown-menu li a {
+  background-color: transparent;
+  color: #E0E0E0;
+  padding: 8px 15px;
+  display: block;
+  border: none;
+  border-radius: 0;
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #2C2C2C;
+  color: #00BCD4;
+}
+
+/* Mobile Nav */
+.nav-toggle {
+  display: none;
+   
+    border: 1px solid #00BCD4;
+  background: #1E1E1E;
+  color: #E0E0E0;
+  border-radius: .5rem;
+    margin: .5rem auto;
+    padding: .5rem .75rem;
+    margin-bottom: 1rem;
+  cursor: pointer;
+  z-index: 4000;  
+  position: sticky;
+  
+}
+
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+    margin: auto auto auto 0;
+    position: sticky;
+  }
+  .nav3{
+    height: 75px;
+  }
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0.5rem;
+    background: #111;
+    border-radius: 0.5em;
+  }
+  .nav-list.active {
+    display: flex;
+  }
+  .nav-dropdown .dropdown-menu:not([hidden]) {
+    display: block;
+    position: relative;
+    border: none;
+    box-shadow: none;
+  }
+}
+
+
+
+
+/* Hero Services Section (heroe4) */
+#heroe-container .container{
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+#heroe-container h2 {
+    margin-bottom: 24px;
+    color: #FFFFFF;
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  align-items: start;
+}
+
+
+
+
+.hero-card {
+  background-color: #1E1E1E;
+  border: 1px solid #333333;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: transform .25s ease, box-shadow .25s ease;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 220px; /* gives visual parity */
+}
+/* hover + keyboard focus */
+.hero-card:hover,
+.hero-card:focus {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(0, 188, 212, 0.12);
+  outline: none;
+}
+
+/* accessible focus ring */
+.hero-card:focus {
+  box-shadow: 0 0 0 4px rgba(0,188,212,0.12), 0 14px 30px rgba(0,0,0,0.12);
+}
+/* heading inside card */
+.hero-card h3 {
+  font-size: 1.15rem;
+  margin: 4px 0;
+  color: #FFFFFF;
+}
+
+.heroe4 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center; /* Center items in the row */
+    gap: 20px; /* Space between hero children */
+}
+
+.heroe-child {
+    flex: 1 1 280px; /* Allows flexibility, minimum width of 280px */
+   max-width: 350px; /* Prevent cards from getting too wide on large screens */
+   padding: 25px; /* Increased padding */
+    text-align: center;
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+heroe-child:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    box-shadow: 0 12px 25px rgba(0, 188, 212, 0.2); /* Accent-colored shadow on hover */
+}
+
+.services-icons {
+    color: #00BCD4; /* Accent color for icons */
+    font-size: 3em; /* Larger icons */
+    line-height: 1; /* Adjust line height for icon sizing */
+    margin-bottom: 15px;
+    margin: 0 auto;
+
+}
+
+.services-icons i {
+    padding: 10px; /* Padding around the icon itself */
+}
+
+.heroe-child h3 {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    color: #FFFFFF;
+}
+
+.services-description {
+    font-size: 0.95rem;
+    color: #B0B0B0; /* Secondary text color */
+    line-height: 1.45;
+  margin-top: auto; /* push description & content to fill space nicely */
+}
+@media (max-width: 480px) {
+  .services-icons { font-size: 2.2rem; width: 60px; height: 60px; }
+  #heroe-container h2 { font-size: 1.6rem; }
+  .hero-card { padding: 16px; min-height: 200px; }
+}
+
+
+
+/* Main Content Grid */
+main {
+    display: flex;/*grid*/
+   /* grid-template-columns: 300px 1fr; /* Filters fixed width, main content fluid */
+   /* grid-template-rows: auto 1fr auto; /* Header, main content, footer */
+    /*grid-template-areas:
+        "header-placeholder header-placeholder" /* Placeholder as main grid covers entire page body for this layout */
+    /*    "filters main-items"
+        "footer-placeholder footer-placeholder"; /* Placeholder */
+   /* flex-grow: 1; /* Allows main to take up available vertical space */
+    /*width: 100%; /* Ensure main takes full width */
+  /*  max-width: 1200px; /* Constrain overall main content width */
+   /* margin: 0 auto; /* Center the main content */
+    /*padding: 20px 0; /* Vertical padding for main area */
+    padding: 1rem;
+    gap: 1.5rem;
+}
+
+/* Filters Sidebar */
+
+.filters-toggle{
+ display: none; /* hidden on desktop */
+  background: #0077cc;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+.filters-toggle i {
+  margin-right: 0.4rem;
+}
+
+@media (max-width: 769px){
+.filters-toggle{
+    position: sticky;
+    right: 45%;
+
+}
+
+.nav-list{
+    position: relative;
+}
+}
+
+aside.filters {
+     flex: 0 0 250px;
+   /* grid-area: filters;
+    position: sticky;
+    top: 20px; /* Adjusted to be below fixed header if header is very tall */
+   /* align-self: start;*/
+   /* padding: 20px; /* Increased padding */
+    padding: 1rem;
+   background-color: #1E1E1E; /* Match card background */
+    border-right: 1px solid #333333; /* Darker border */
+    border-radius: 8px; /* Match card border-radius */
+    /*height: calc(100vh - 40px); /* Adjust height to fill viewport minus top/bottom padding */
+   height: 100%t;
+    overflow-y: auto; /* Enable scrolling for filters if content overflows */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for filters */
+}
+
+.filters-main-title {
+    font-size: 1.3rem; /* Slightly adjusted to fit sidebar */
+    margin-bottom: 1rem;
+    color: #00BCD4; /* Accent color for main filter title */
+    text-align: center;
+}
+
+.filter-category {
+    margin-bottom: 1.5rem;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333333; /* Darker separator line */
+}
+
+.filter-category:last-of-type {
+    border-bottom: none;
+}
+
+.filter-title {
+    padding-bottom: 0.3rem;
+    font-size: 1.1rem;
+    font-weight: 600; /* Semi-bold */
+    margin-bottom: 0.75rem;
+    color: #FFFFFF; /* White for filter titles */
+}
+.filter-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.filter-options--checkbox-list .filter-list,
+.filter-options--radio-list .filter-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Increased gap for better spacing */
+  list-style: none; /* Remove list bullets */
+    padding: 0;
+    margin: 0;
+}
+
+.filter-list-item {
+    color: #E0E0E0; /* Text color for filter labels */
+    display: flex; /* For aligning checkbox/radio with label */
+    align-items: center;
+     margin-bottom: 0.5rem;
+}
+
+.filter-label {
+     margin-left: 0.4rem;
+    cursor: pointer;
+    font-size: 0.95em;
+    transition: color 0.3s ease;
+}
+
+.filter-range-display {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.filter-label:hover {
+    color: #00BCD4; /* Accent color on hover */
+}
+
+
+.filter-options--select .filter-select,
+.filter-options--select-group .filter-select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #333333;
+    border-radius: 5px;
+    background-color: #2C2C2C;
+    color: #E0E0E0;
+    /* Add custom arrow for select if desired, using `appearance: none` and `background-image` */
+}
+
+.filter-options--range .filter-range-input {
+    width: 100%;
+    margin-bottom: 10px;
+    /* Custom track and thumb styling for range input for dark theme */
+    -webkit-appearance: none;
+    appearance: none;
+    background: #333333;
+    height: 8px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.filter-options--range .filter-range-input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #00BCD4;
+    border: 2px solid #FFFFFF;
+    border-radius: 50%;
+    cursor: grab;
+    margin-top: -6px; /* Center thumb vertically */
+    box-shadow: 0 0 0 2px rgba(0, 188, 212, 0.3);
+}
+.filter-options--range .filter-range-input::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #00BCD4;
+    border: 2px solid #FFFFFF;
+    border-radius: 50%;
+    cursor: grab;
+    box-shadow: 0 0 0 2px rgba(0, 188, 212, 0.3);
+}
+
+.filter-options--range .filter-range-display {
+    text-align: center;
+    font-weight: bold;
+    color: #E0E0E0;
+    font-size: 1.1em;
+}
+
+.filter-category--actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.filter-button {
+    /*padding: 10px 15px;*/
+      display: inline-block;
+  padding: 0.5rem 1rem;
+  margin-right: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600; /* Semi-bold */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.filter-button--apply {
+    background-color: #00BCD4;
+    color: #FFFFFF;
+}
+
+.filter-button--apply:hover {
+    background-color: #00A6B2;
+}
+
+.filter-button--clear {
+    background-color: transparent;
+    color: #00BCD4;
+    border: 2px solid #00BCD4;
+}
+
+.filter-button--clear:hover {
+    background-color: #00BCD4;
+    color: #FFFFFF;
+}
+
+
+
+
+
+@media (min-width: 769px) {
+/* Main Content Grid */
+main {
+    display: grid;
+    grid-template-columns: 300px 1fr; /* Filters fixed width, main content fluid */
+    grid-template-rows: auto 1fr auto; /* Header, main content, footer */
+    grid-template-areas:
+        "header-placeholder header-placeholder" /* Placeholder as main grid covers entire page body for this layout */
+        "filters main-items"
+        "footer-placeholder footer-placeholder"; /* Placeholder */
+    flex-grow: 1; /* Allows main to take up available vertical space */
+    width: 100%; /* Ensure main takes full width */
+    max-width: 1200px; /* Constrain overall main content width */
+    margin: 0 auto; /* Center the main content */
+    padding: 20px 0; /* Vertical padding for main area */
+}
+
+/* Filters Sidebar */
+aside.filters {
+    grid-area: filters;
+    position: sticky;
+    top: 20px; /* Adjusted to be below fixed header if header is very tall */
+    align-self: start;
+    padding: 20px; /* Increased padding */
+    background-color: #1E1E1E; /* Match card background */
+    border-right: 1px solid #333333; /* Darker border */
+    border-radius: 8px; /* Match card border-radius */
+    height: calc(100vh - 40px); /* Adjust height to fill viewport minus top/bottom padding */
+    overflow-y: auto; /* Enable scrolling for filters if content overflows */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for filters */
+}
+
+.filters-main-title {
+    font-size: 2em; /* Slightly adjusted to fit sidebar */
+    margin-bottom: 20px;
+    color: #00BCD4; /* Accent color for main filter title */
+    text-align: center;
+}
+
+.filter-category {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333333; /* Darker separator line */
+}
+
+.filter-category:last-of-type {
+    border-bottom: none;
+}
+
+.filter-title {
+    font-size: 1.25em;
+    font-weight: 600; /* Semi-bold */
+    margin-bottom: 15px;
+    color: #FFFFFF; /* White for filter titles */
+}
+
+.filter-options--checkbox-list .filter-list,
+.filter-options--radio-list .filter-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Increased gap for better spacing */
+    list-style: none; /* Remove list bullets */
+    padding: 0;
+    margin: 0;
+}
+
+.filter-list-item {
+    color: #E0E0E0; /* Text color for filter labels */
+    display: flex; /* For aligning checkbox/radio with label */
+    align-items: center;
+}
+
+.filter-label {
+    cursor: pointer;
+    font-size: 0.95em;
+    transition: color 0.3s ease;
+}
+
+.filter-label:hover {
+    color: #00BCD4; /* Accent color on hover */
+}
+
+
+.filter-options--select .filter-select,
+.filter-options--select-group .filter-select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #333333;
+    border-radius: 5px;
+    background-color: #2C2C2C;
+    color: #E0E0E0;
+    /* Add custom arrow for select if desired, using `appearance: none` and `background-image` */
+}
+
+.filter-options--range .filter-range-input {
+    width: 100%;
+    margin-bottom: 10px;
+    /* Custom track and thumb styling for range input for dark theme */
+    -webkit-appearance: none;
+    appearance: none;
+    background: #333333;
+    height: 8px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.filter-options--range .filter-range-input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #00BCD4;
+    border: 2px solid #FFFFFF;
+    border-radius: 50%;
+    cursor: grab;
+    margin-top: -6px; /* Center thumb vertically */
+    box-shadow: 0 0 0 2px rgba(0, 188, 212, 0.3);
+}
+.filter-options--range .filter-range-input::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #00BCD4;
+    border: 2px solid #FFFFFF;
+    border-radius: 50%;
+    cursor: grab;
+    box-shadow: 0 0 0 2px rgba(0, 188, 212, 0.3);
+}
+
+.filter-options--range .filter-range-display {
+    text-align: center;
+    font-weight: bold;
+    color: #E0E0E0;
+    font-size: 1.1em;
+}
+
+.filter-category--actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.filter-button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600; /* Semi-bold */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.filter-button--apply {
+    background-color: #00BCD4;
+    color: #FFFFFF;
+}
+
+.filter-button--apply:hover {
+    background-color: #00A6B2;
+}
+
+.filter-button--clear {
+    background-color: transparent;
+    color: #00BCD4;
+    border: 2px solid #00BCD4;
+}
+
+.filter-button--clear:hover {
+    background-color: #00BCD4;
+    color: #FFFFFF;
+}
+
+
+/* Main Items Display */
+main #general_display {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 20px; /* Reduced padding as main has padding now */
+    margin: 0; /* Remove auto margin as main handles centering */
+    grid-area: main-items;
+    gap: 20px; /* Consistent gap between shop items */
+    justify-content: center; /* Center items if they don't fill the row */
+    align-content: flex-start; /* Prevent items from stretching vertical space */
+}
+
+main #general_display .shop_item {
+    flex: 1 1 calc(25% - 20px); /* 4 items per row, accounting for gap */
+    max-width: calc(25% - 20px); /* Ensure 4 items per row on wider screens */
+    min-width: 250px; /* Minimum width for item before wrapping */
+    display: flex;
+    flex-direction: column;
+    background-color: #1E1E1E;
+    border: 1px solid #333333;
+    border-radius: 0.5em;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* Consistent with hero-child */
+    margin: 0; /* Remove individual item margins as gap handles it */
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+main #general_display .shop_item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 188, 212, 0.2); /* Accent shadow on hover */
+}
+
+main #general_display .shop_item img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 15px auto; /* Centered, space below */
+    border-radius: 0.5em;
+    transition-property: transform;
+    transition-duration: .3s;
+    transition-timing-function: linear;
+}
+main #general_display .shop_item img:hover{
+transform: rotatey(360deg);
+}
+main #general_display .shop_item h3 {
+    font-weight: 600; /* Semi-bold */
+    padding: 0;
+    text-align: center;
+    margin: 10px 0;
+    color: #FFFFFF;
+    font-size: 1.2rem;
+    flex-grow: 1; /* Allows title to take available space */
+}
+
+
+}
+
+
+
+/* Main Items Display */
+main #general_display {
+    /*display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;*/
+     flex: 1;                     /* take remaining space */
+    padding: 1rem;
+    display: grid;
+     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1rem;
+    flex: 1;
+
+    padding: 1rem; /* Reduced padding as main has padding now */
+    margin: .5rem; /* Remove auto margin as main handles centering */
+    /*grid-area: main-items;
+    gap: 20px; /* Consistent gap between shop items */
+   /* justify-content: center; /* Center items if they don't fill the row */
+    /*align-content: flex-start; /* Prevent items from stretching vertical space */
+}
+
+main #general_display .shop_item {
+    flex: 1 1 calc(25% - 20px); /* 4 items per row, accounting for gap */
+    max-width: calc(25% - 20px); /* Ensure 4 items per row on wider screens */
+    min-width: 250px; /* Minimum width for item before wrapping */
+    display: flex;
+    flex-direction: column;
+    background-color: #1E1E1E;
+    border: 1px solid #333333;
+    border-radius: 0.5em;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* Consistent with hero-child */
+    margin: 0; /* Remove individual item margins as gap handles it */
+    padding:.75rem;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+main #general_display .shop_item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 188, 212, 0.2); /* Accent shadow on hover */
+}
+
+main #general_display .shop_item img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 15px auto; /* Centered, space below */
+    border-radius: 0.5em;
+    transition-property: transform;
+    transition-duration: .3s;
+    transition-timing-function: linear;
+}
+main #general_display .shop_item img:hover{
+transform: rotatey(360deg);
+}
+main #general_display .shop_item h3 {
+    font-weight: 600; /* Semi-bold */
+    padding: 0;
+    text-align: center;
+    margin: 10px 0;
+    color: #FFFFFF;
+    font-size: 1.2rem;
+    flex-grow: 1; /* Allows title to take available space */
+}
+
+main #general_display .shop_item p {
+    padding: 0;
+    margin: 10px 0;
+    text-align: center;
+    color: #E0E0E0;
+}
+
+main #general_display .shop_item p .price {
+    font-weight: bold;
+    color: #00BCD4; /* Accent color for price */
+    font-size: 1.2rem;
+}
+
+main #general_display .shop_item .shopping_buttons_container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+    margin-top: 15px; /* Space above buttons */
+    gap: 8px; /* Space between buttons */
+}
+
+main #general_display .shop_item .shopping_actions {
+    padding: 10px;
+    border-radius: 0.5em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Lighter shadow for buttons */
+    background-color: #2C2C2C; /* Darker background for product actions */
+    color: #00BCD4; /* Accent text color */
+    border: 1px solid #333333;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    font-weight: 500;
+
+     display: inline-block;
+  margin: 0.25rem;
+  padding: 0.4rem 0.75rem;
+  border: none;
+  border-radius: 5px;
+    font-size: 0.85rem;
+  cursor: pointer;
+
+}
+
+main #general_display .shop_item .shopping_actions:hover {
+    background-color: #00BCD4;
+    color: #FFFFFF;
+    border-color: #00BCD4;
+}
+
+main #general_display .shop_item .promotion_offer_badge {
+    position: absolute;
+    top: 15px; /* Adjusted position */
+    right: 15px; /* Adjusted position */
+    color: white;
+    font-size: 0.8em;
+    font-weight: bold;
+    white-space: nowrap;
+    text-transform: uppercase;
+    background-color: #FF5722; /* A warm orange for promotions */
+    border-radius: 5px; /* Slightly more rounded */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+   /* padding: 4px 8px; /* Increased padding */
+    padding: 0.2rem 0.6rem;
+    z-index: 1000;
+}
+
+main #general_display .shop_item .promotion_offer_badge p {
+    margin: 0; /* Remove default paragraph margin inside badge */
+    color: #FFFFFF;
+}
+
+/* --- Mobile responsive --- */
+@media (max-width: 768px) {
+  main {
+
+    flex-direction: column;
+  }
+
+  .filters-toggle {
+    display: inline-block;
+    position: sticky;
+    top: 20px;
+    z-index: 4000;
+    background-color: transparent;
+    display: inline-block;
+  padding: .5rem .75rem;
+border: 1px solid #00BCD4;
+  background: #1E1E1E;
+  color: #E0E0E0;
+  border-radius: .5rem;
+  /*margin: .5rem;*/
+  margin: .5rem auto;
+  cursor: pointer;
+
+  }
+
+ .filters {
+    display: none; /* hidden by default */
+    width: 100%;
+  }
+
+  .filters.active {
+    display: block; /* shown when toggled */
+ }
+/*Hide sidebar layout version */
+  aside.filters {
+    display: none;
+  }
+
+}
+/* === Filters Modal (mobile only) === */
+@media (max-width: 767px) {
+  /* Hide sidebar layout version */
+  aside.filters {
+    display: none;
+  }
+
+  /* Modal overlay */
+  .filters-modal {
+    display: none; /* hidden by default */
+    position: fixed;
+    inset: 0; /* full viewport */
+    background: rgba(0,0,0,0.6);
+    z-index: 5000;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .filters-modal.active {
+    display: flex; /* show when active */
+  }
+
+  .filters-modal .filters {
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+    overflow-y: auto;
+    background: #1E1E1E;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    animation: slideIn .3s ease;
+  }
+
+  /* Small close button inside modal */
+  .filters-modal .close-filters {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+  }
+
+  @keyframes slideIn {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+}
+
+/*
+|--------------------------------------------------------------------------
+| 4.1 Repairs.html.css)
+|--------------------------------------------------------------------------
+*/
+.repairs-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    margin: 0 auto;
+    background-color: #1E1E1E;
+    border: 1px solid #333333;
+    border-radius: 0.5em;
+    padding: 15px;
+}
+.repairs-container h2,.repairs-container p{
+    text-align: center;
+    margin: 0 auto;
+}
+.repairs-intro{
+    flex: 1 1 100%;
+    padding: 10px;
+    margin: 15px;
+ 
+}
+.repairs{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.repair-child {
+    flex: 1 1 280px; /* Allows flexibility, minimum width of 280px */
+    max-width: 350px; /* Prevent cards from getting too wide on large screens */
+    padding: 25px;
+    margin: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+     background-color: #1E1E1E;
+    border: 1px solid #333333;
+    border-radius: 0.5em;
+}
+
+.repair-child:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    box-shadow: 0 12px 25px rgba(0, 188, 212, 0.2); /* Accent-colored shadow on hover */
+}
+
+/*
+|--------------------------------------------------------------------------
+|4.2 footer
+|--------------------------------------------------------------------------
+*/
+.main-footer{
+background-color: #1E1E1E;
+
+        border: 1px solid #333333;
+        border-radius: 0.5em;
+}
+ .footer-content {
+            display: flex;
+            flex-wrap: wrap;  
+            justify-content: space-between;
+        }
+
+        /* Individual footer sections */
+        .footer-section {
+            display: flex;
+            flex-direction: column;
+         
+            flex: 1; 
+            min-width: 250px; /* Ensures sections don't get too small before wrapping */
+            margin: 0 0;
+            padding: 10px;
+            text-align: center;
+             transition: transform 0.3s ease, box-shadow 0.3s ease;
+        background-color: #1E1E1E;
+   
+        border-radius: 0.5em;
+        }
+
+        /* Styling for headings and text */
+        .footer-section h3 {
+            color: #f0f0f0;
+            margin-bottom: 0.5em;
+            font-weight: bold;
+            font-size: 1.25em;
+        }
+
+        .footer-section p {
+            color: #cccccc;
+            margin-bottom: 0.5em;
+            line-height: 1.5;
+        }
+
+        /* Links and lists */
+        .footer-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-list a, .footer-section a {
+            color: #87CEFA; /* A light blue for links */
+          
+            text-decoration: none;
+            transition: color 0.3s ease;
+    
+             border-radius: .5em; /* Rounded corners */
+        }
+        
+        .footer-list a:hover, .footer-section a:hover {
+           background-color: #00BCD4;
+            color: #FFFFFF;
+            text-decoration: underline;
+              padding: 5px;
+        }
+        
+        .footer-section p a {
+            font-weight: 400;
+        }
+
+        /* Social media icons/links */
+        .social-links {
+            display: flex;
+            gap: .5em;
+            margin-top: 1em;
+        }
+
+        .social-icon {
+            flex: 1 1 30%;
+            padding: 0.5em .5em;
+            border: 1px solid #555;
+            border-radius: 0.25em;
+            transition: background-color 0.3s ease;
+        }
+
+        .social-icon:hover {
+            background-color: #555;
+        }
+
+        /* Footer bottom section for copyright */
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid #333333;
+            margin-top: 2em;
+            padding-top: 1em;
+        }
+
+        .footer-bottom p {
+            font-size: 0.85em;
+            color: #999999;
+            margin: 0;
+            font-weight: bold;
+            border-top: none;
+            padding: 15px;
+
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .footer-content {
+                flex-direction: column;
+            }
+            
+            .footer-section {
+                min-width: 100%;
+            }
+
+            .main-footer {
+                margin: 1em;
+            }
+        }
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .footer-content {
+           
+            }
+            
+            .footer-section {
+              
+            }
+
+            .main-footer {
+             
+        }
+
+/*
+|--------------------------------------------------------------------------
+| 5. Responsive Design (_responsive.css)
+|--------------------------------------------------------------------------
+| Media queries for adapting layout to different screen sizes.
+*/
+
+/* General Tablet/Mobile Adjustments */
+
+@media (max-width: 992px) {
+    .search-and-account2 {
+        flex-direction: column; /* Stack header sections */
+        align-items: flex-start;
+        padding: 10px 15px;
+    }
+
+    #logo-plus-search {
+        width: 100%;
+        justify-content: space-between; /* Distribute items horizontally */
+        margin-bottom: 15px;
+    }
+
+    #search-panel {
+        flex-grow: 1; /* Allow search to take remaining space */
+        min-width: unset; /* Remove min-width constraint */
+        width: 100%;
+        order: 3; /* Move search below logo/cart/user */
+        margin-top: 10px;
+    }
+
+    .site-logo {
+        flex-basis: auto;
+    }
+
+    #shopping-cart, #user-account {
+        flex-shrink: 0; /* Don't allow these to shrink */
+        margin-left: 10px; /* Space them out from each other */
+    }
+
+    .nav3 {
+        margin-left: 0;
+        margin-top: 15px;
+        width: 100%; /* Nav takes full width */
+        position: sticky;
+    }
+
+    .nav-list {
+        flex-direction: column; /* Stack nav items vertically */
+        align-items: flex-start;
+        gap: 8px;
+        padding: 0; /* Remove padding from list */
+        margin: 0; /* Remove margin from list */
+    }
+
+    .nav-link {
+        width: 100%; /* Make nav links full width */
+        text-align: left;
+        padding: 10px 15px; /* Adjust padding for full-width buttons */
+    }
+
+    .heroe4 {
+        flex-direction: column; /* Stack hero cards vertically */
+        align-items: center;
+    }
+
+    .heroe-child {
+        min-width: 90%; /* Make hero cards wider on smaller screens */
+        max-width: 400px; /* Constrain max width for design */
+        margin: 10px 0;
+    }
+
+    main {
+        grid-template-columns: 1fr; /* Filters become full width, stacked above main content */
+        grid-template-rows: auto auto 1fr auto;
+        grid-template-areas:
+            "header-placeholder"
+            "filters"
+            "main-items"
+            "footer-placeholder";
+        padding: 0; /* Remove main padding, elements will have their own */
+    }
+
+    aside.filters {
+        position: static; /* No longer sticky */
+        height: auto; /* Height adapts to content */
+        border-right: none; /* No side border */
+        border-bottom: 1px solid #333333; /* Add bottom border */
+        border-radius: 0; /* No border-radius for full width */
+        margin-bottom: 20px; /* Space below filters */
+    }
+
+    main #general_display {
+        flex-direction: column; /* Stack shop items vertically */
+        align-items: center;
+        padding: 20px 15px;
+    }
+
+    main #general_display .shop_item {
+        flex: 1 1 90%; /* Full width for shop items */
+        max-width: 400px; /* Max width for design */
+        margin: 10px 0;
+    }
+}
+.footer-content{
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+
+}
+.footer-section{
+flex: 1 1 95%;
+}
+@media screen and (min-width: 767px) and (max-width: 1098px) {
+  .sticky-nav  {
+    border: none;
+    position: sticky;
+    top: 0; 
+  }
+ .sticky-nav {
+    border: none;
+  }
+}
+/* Smaller Mobile Adjustments */
+@media (max-width: 480px) {
+    h1 { font-size: 2em; }
+    h2 { font-size: 1.75em; }
+    .campaign1 {
+        font-size: 0.8em;
+        gap: 10px;
+    }
+    .campaign1 p {
+        flex-direction: column; /* Stack phone, delivery, warranty vertically */
+        gap: 5px;
+    }
+
+    #logo-plus-search {
+        flex-direction: column; /* Stack logo, search, cart, user */
+        align-items: center;
+    }
+
+    .site-logo {
+        margin-bottom: 10px;
+    }
+
+    #search-panel {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .search-and-account2-child {
+        width: 100%; /* Make cart/user take full width if stacked */
+        justify-content: center;
+        padding: 5px 0;
+    }
+    
+    .filter-options--checkbox-list .filter-list,
+    .filter-options--radio-list .filter-list {
+        flex-direction: column; /* Stack filter options */
+    }
+    .filter-list-item {
+        width: 100%;
+    }
+
+}

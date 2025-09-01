@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <LINK rel="stylesheet" href="STYLE.CSS">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fcab21f617.js" crossorigin="anonymous"></script>
+    <title>Trade-in & Sell</title>
+</head>
+<body>
+<header class="main-header">
+  <!-- Promo / campaign bar -->
+  <div class="campaign1" role="status" aria-live="polite">
+    <p>
+      <span><i class="fa-solid fa-phone"></i></span>
+      <a href="tel:+254784289162">+254 784 289 162</a>
+      Nairobi, Kenya
+      <span><i class="fa-solid fa-truck"></i></span> free delivery Kenya
+      <span><i class="fa-solid fa-shield-halved"></i></span> 1 year warranty
+    </p>
+  </div>
+
+  <!-- Top bar -->
+  <div class="search-and-account2">
+    <div id="logo-plus-search" class="search-and-account2-child">
+      <a href="index.html" class="site-logo" aria-label="tsailun technologies home">
+        <img src="IMAGES/lenovo-logo.avif" alt="tsailun technologies logo">
+      </a>
+
+      
+      <!-- proper form for search -->
+      <form id="search-panel" class="search-and-account2-child" role="search" aria-label="Site search" action="/search" method="GET">
+        <label for="site-search" class="visually-hidden">Search products</label>
+        <input id="site-search" name="q" type="search" placeholder="Search" aria-label="Search the site">
+        <button type="submit" aria-label="Submit search">
+          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        </button>
+      </form>
+
+      <div id="shopping-cart" class="search-and-account2-child">
+        <button type="button" aria-label="View shopping cart">
+          <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <div id="user-account-header" class="search-and-account2-child">
+        <button type="button" aria-label="User login">
+          <i class="fa-solid fa-user" aria-hidden="true"></i>
+        </button>
+        <p>Login</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav class="main-header nav3 sticky-nav" role="navigation" aria-label="Main navigation">
+  <!-- Mobile menu button -->
+  <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="nav-list" aria-label="Open menu">
+    ☰ Menu
+  </button>
+
+    <ul class="nav-list" id="nav-list">
+        <li class="nav-item"><a href="INDEX.HTML" class="nav-link">Home</a></li>
+        <li class="nav-item nav-dropdown">
+            <a href="laptops.html" class="nav-link">Laptops <span aria-hidden="true">▼</span></a>
+            <ul class="dropdown-menu" id="laptopsDropdownMenu" hidden>
+                <li><a href="laptops.html">All Laptops</a></li>
+                <li><a href="laptops-under20k.html">Under 20k</a></li>
+                <li><a href="macbooks.html">Macbooks</a></li>
+                <li><a href="refurbished-laptops.html">Refurbished Laptops</a></li>
+                <li><a href="gaming-laptops.html">Gaming Laptops</a></li>
+            </ul>
+        </li>
+        <li class="nav-item"><a href="softwaress.html" class="nav-link">Softwares</a></li>
+        <li class="nav-item"><a href="desktops.html" class="nav-link">Desktops</a></li>
+        <li class="nav-item"><a href="accessories.html" class="nav-link" aria-current="page">Accessories</a></li>
+        <li class="nav-item"><a href="iphones.html" class="nav-link">iPhones</a></li>
+        <li class="nav-item"><a href="repairs.html" class="nav-link">Repair</a></li>
+    </ul>
+</nav>
+
+<main class="main-layout">
+    <div class="heroe-software">
+        <img src="IMAGES/today.avif" alt="trade-in hero image" class="heroe-software-children">
+        <div class="heroe-software-children">
+            <h2>Trade-in & Sell Your Old Device</h2>
+            <p class="software-description">Get a fair price for your used laptops, phones, and other devices. Upgrade to a new machine or get cash back!</p>
+        </div>
+    </div>
+    
+    <section class="trade-in-section">
+        <h2 class="trade-in-main-title">Our Simple 3-Step Process</h2>
+        <div class="trade-in-steps-container">
+            <div class="trade-in-step">
+                <div class="step-icon">1️⃣</div>
+                <h3>Get an Instant Quote</h3>
+                <p>Fill out our simple online form with details about your device to receive an instant, estimated quote.</p>
+                <button class="call-to-action">Get a Quote Now</button>
+            </div>
+            <div class="trade-in-step">
+                <div class="step-icon">2️⃣</div>
+                <h3>Device Inspection</h3>
+                <p>Bring your device to our store for a free physical inspection. We'll verify its condition and provide a final offer.</p>
+                <button class="call-to-action">Visit Us</button>
+            </div>
+            <div class="trade-in-step">
+                <div class="step-icon">3️⃣</div>
+                <h3>Get Paid or Upgrade</h3>
+                <p>Accept the final offer and choose your payment method: instant cash or store credit to upgrade to a new device.</p>
+                <button class="call-to-action">See Our Products</button>
+            </div>
+        </div>
+    </section>
+    
+    <section class="trade-in-info-section">
+        <div class="info-block">
+            <h3>What We Accept</h3>
+            <p>We accept a wide range of devices, including laptops, desktops, MacBooks, iPhones, and tablets from major brands like Dell, HP, Lenovo, and Apple.</p>
+        </div>
+        <div class="info-block">
+            <h3>Why Trade-in with Us?</h3>
+            <ul class="why-us-list">
+                <li>✅ Fair and competitive pricing.</li>
+                <li>✅ Quick and hassle-free process.</li>
+                <li>✅ Secure data wiping services.</li>
+                <li>✅ Reduce e-waste by recycling.</li>
+            </ul>
+        </div>
+    </section>
+
+</main>
+<footer class="main-footer">
+    <div class="footer-content">
+        <div class="footer-section footer-about">
+            <h3>Tsailun Technologies</h3>
+            <p>Quality refurbished laptops and custom builds in Nairobi. Smart tech choices for a smarter planet.</p>
+            <p>Located at Imenti House, Basement Shop No. 14, Tom Mboya Street, Nairobi.</p>
+        </div>
+        <div class="footer-section footer-links">
+            <h3>Quick Links</h3>
+            <ul class="footer-list">
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="warranty.html">Warranty & Returns</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+            </ul>
+        </div>
+        <div class="footer-section footer-nav">
+            <h3>Shop Categories</h3>
+            <ul class="footer-list">
+                <li><a href="laptops.html">Laptops</a></li>
+                <li><a href="softwaress.html">Softwares</a></li>
+                <li><a href="desktops.html">Desktops</a></li>
+                <li><a href="accessories.html">Accessories</a></li>
+                <li><a href="iphones.html">Refurbished iPhones</a></li>
+                <li><a href="repairs.html">Diagnosis And Repair</a></li>
+            </ul>
+        </div>
+        <div class="footer-section footer-contact">
+            <h3>Get in Touch</h3>
+            <p>Email: <a href="mailto:tsailunenterprises@gmail.com">tsailunenterprises@gmail.com</a></p>
+            <p>Phone: <a href="tel:+254784289162">+254 784289162</a></p>
+            <div class="social-links">
+                <a href="#" class="social-icon">Facebook</a> 
+                <a href="#" class="social-icon">Instagram</a>
+                <a href="#" class="social-icon">Twitter</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Your Tsailun Technologies. All rights reserved.</p>
+    </div>
+</footer>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const navToggle = document.getElementById("nav-toggle");
+  const navList = document.getElementById("nav-list");
+  const laptopLink = document.getElementById("laptopLink");
+  const laptopDropdown = document.getElementById("laptopsDropdownMenu");
+
+  // Mobile menu toggle
+  navToggle.addEventListener("click", () => {
+    navList.classList.toggle("active");
+    navToggle.setAttribute(
+      "aria-expanded",
+      navList.classList.contains("active")
+    );
+  });
+
+  // Mobile laptops dropdown toggle
+  laptopLink.addEventListener("click", (e) => {
+    if (window.innerWidth < 769) {
+      e.preventDefault();
+      laptopDropdown.toggleAttribute("hidden");
+    }
+  });
+});
+</script>
+</body>
+</html>

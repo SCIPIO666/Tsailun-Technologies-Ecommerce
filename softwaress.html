@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <LINK rel="stylesheet" href="STYLE.CSS">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fcab21f617.js" crossorigin="anonymous"></script>
+    <style>
+       @import url(softwares.css);
+    </style>
+    <title>Softwares</title>
+</head>
+<body>
+<header class="main-header">
+  <!-- Promo / campaign bar -->
+  <div class="campaign1" role="status" aria-live="polite">
+    <p>
+      <span><i class="fa-solid fa-phone"></i></span>
+      <a href="tel:+254784289162">+254 784 289 162</a>
+      Nairobi, Kenya
+      <span><i class="fa-solid fa-truck"></i></span> free delivery Kenya
+      <span><i class="fa-solid fa-shield-halved"></i></span> 1 year warranty
+    </p>
+  </div>
+
+  <!-- Top bar -->
+  <div class="search-and-account2">
+    <div id="logo-plus-search" class="search-and-account2-child">
+      <a href="index.html" class="site-logo" aria-label="tsailun technologies home">
+        <img src="IMAGES/lenovo-logo.avif" alt="tsailun technologies logo">
+      </a>
+
+      
+      <!-- proper form for search -->
+      <form id="search-panel" class="search-and-account2-child" role="search" aria-label="Site search" action="/search" method="GET">
+        <label for="site-search" class="visually-hidden">Search products</label>
+        <input id="site-search" name="q" type="search" placeholder="Search" aria-label="Search the site">
+        <button type="submit" aria-label="Submit search">
+          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        </button>
+      </form>
+
+      <div id="shopping-cart" class="search-and-account2-child">
+        <button type="button" aria-label="View shopping cart">
+          <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <div id="user-account-header" class="search-and-account2-child">
+        <button type="button" aria-label="User login">
+          <i class="fa-solid fa-user" aria-hidden="true"></i>
+        </button>
+        <p>Login</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav class="main-header nav3 sticky-nav" role="navigation" aria-label="Main navigation">
+  <!-- Mobile menu button -->
+  <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="nav-list" aria-label="Open menu">
+    ☰ Menu
+  </button>
+
+    <ul class="nav-list" id="nav-list">
+        <li class="nav-item"><a href="INDEX.HTML" class="nav-link">Home</a></li>
+        <li class="nav-item nav-dropdown">
+            <a href="laptops.html" class="nav-link">Laptops <span aria-hidden="true">▼</span></a>
+            <ul class="dropdown-menu" id="laptopsDropdownMenu" hidden>
+                <li><a href="laptops.html">All Laptops</a></li>
+                <li><a href="laptops-under20k.html">Under 20k</a></li>
+                <li><a href="macbooks.html">Macbooks</a></li>
+                <li><a href="refurbished-laptops.html">Refurbished Laptops</a></li>
+                <li><a href="gaming-laptops.html">Gaming Laptops</a></li>
+            </ul>
+        </li>
+        <li class="nav-item"><a href="softwaress.html" class="nav-link">Softwares</a></li>
+        <li class="nav-item"><a href="desktops.html" class="nav-link">Desktops</a></li>
+        <li class="nav-item"><a href="accessories.html" class="nav-link" aria-current="page">Accessories</a></li>
+        <li class="nav-item"><a href="iphones.html" class="nav-link">iPhones</a></li>
+        <li class="nav-item"><a href="repairs.html" class="nav-link">Repair</a></li>
+    </ul>
+</nav>
+<div class="heroe-software">
+                <img src="IMAGES/unnamed.png" alt="softwares-hero-image" class="heroe-software-children" alt="softwares image">
+                    <div class="heroe-software-children">
+                        <h2>Software Solutions</h2>
+                        <p class="software-description">Get genuine software, installation, and activation for all your productivity, design, security, and gaming needs.</p>
+                    </div>
+</div>
+
+<main class="main-layout">
+ 
+    <!-- Mobile toggle -->
+        <button id="filters-toggle" class="filters-toggle" aria-controls="filters" aria-expanded="false">
+          <i class="fa-solid fa-filter"></i> Filters
+        </button>
+
+          <!-- Sidebar -->
+          <aside id="filters" class="filters">
+            <h1 class="filters-main-title">Laptops</h1>
+
+            <!-- Laptop Type Filter Category -->
+            <div class="filter-category">
+
+              <h3 class="filter-title">Laptop Type</h3>
+
+              <div class="filter-options filter-options--checkbox-list">
+                <ul class="filter-list">
+                  <li class="filter-list-item">
+                    <input type="checkbox" id="type-gaming" value="gaming-laptops" class="filter-input">
+                    <label for="type-gaming" class="filter-label">Gaming Laptops</label>
+                  </li>
+                  <li class="filter-list-item">
+                    <input type="checkbox" id="type-business" value="business-laptops" class="filter-input">
+                    <label for="type-business" class="filter-label">Business Laptops</label>
+                  </li>
+                  <li class="filter-list-item">
+                    <input type="checkbox" id="type-student" value="student-laptops" class="filter-input">
+                    <label for="type-student" class="filter-label">Student Laptops</label>
+                  </li>
+                  <li class="filter-list-item">
+                    <input type="checkbox" id="type-budget" value="entry-level-budget-laptops" class="filter-input">
+                    <label for="type-budget" class="filter-label">Entry-Level/Budget Laptops</label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Price Filter Category -->
+            <div class="filter-category">
+              <h3 class="filter-title">Price</h3>
+              <div class="filter-options filter-options--range">
+                <input type="range" id="price-range" min="5000" max="200000" value="100000" class="filter-range-input">
+                <p class="filter-range-display">
+                  KSh <span id="min-price">5,000</span> - <span id="max-price">100,000</span>
+                </p>
+              </div>
+            </div>
+
+            <!-- Brand Filter Category -->
+            <div class="filter-category">
+              <h3 class="filter-title">Brand</h3>
+              <div class="filter-options filter-options--checkbox-list">
+                <ul class="filter-list">
+                  <li class="filter-list-item"><input type="checkbox" id="brand-dell" value="Dell" class="filter-input"><label for="brand-dell" class="filter-label">Dell</label></li>
+                  <li class="filter-list-item"><input type="checkbox" id="brand-hp" value="HP" class="filter-input"><label for="brand-hp" class="filter-label">HP</label></li>
+                  <li class="filter-list-item"><input type="checkbox" id="brand-lenovo" value="Lenovo" class="filter-input"><label for="brand-lenovo" class="filter-label">Lenovo</label></li>
+                  <li class="filter-list-item"><input type="checkbox" id="brand-apple" value="Apple" class="filter-input"><label for="brand-apple" class="filter-label">Apple</label></li>
+                  <li class="filter-list-item"><input type="checkbox" id="brand-acer" value="Acer" class="filter-input"><label for="brand-acer" class="filter-label">Acer</label></li>
+                  <li class="filter-list-item"><input type="checkbox" id="brand-asus" value="Asus" class="filter-input"><label for="brand-asus" class="filter-label">Asus</label></li>
+                  <li class="filter-list-item"><input type="checkbox" id="brand-microsoft" value="Microsoft" class="filter-input"><label for="brand-microsoft" class="filter-label">Microsoft Surface</label></li>
+                  <li class="filter-list-item"><input type="checkbox" id="brand-huawei" value="Huawei" class="filter-input"><label for="brand-huawei" class="filter-label">Huawei</label></li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- (keep the rest of your categories as is: OS, Processor, RAM, Storage, Screen Size, etc.) -->
+
+            <!-- Action Buttons -->
+            <div class="filter-category filter-category--actions">
+              <button type="submit" class="filter-button filter-button--apply">Apply Filters</button>
+              <button type="reset" class="filter-button filter-button--clear">Clear Filters</button>
+            </div>
+          </aside>
+    
+ <section id="general_display">
+    <div class="shop_item" data-type="games">
+        <img src="IMAGES/software-1.webp" alt="FIFA game cover">
+        <h3>FIFA</h3>
+        <p>Popular football simulation game. Installation and setup for PC.</p>
+        <div class="shopping_buttons_container">
+            <p class="price">Ksh 1,500</p>
+            <button class="shopping_actions">Add to Cart</button>
+            <button class="shopping_actions">View Details</button>
+        </div>
+    </div>
+    
+    <div class="shop_item" data-type="games">
+        <img src="IMAGES/software-1.webp" alt="Need for Speed game cover">
+        <h3>Need for Speed</h3>
+        <p>High-speed racing game series. Installation and support for PC.</p>
+        <div class="shopping_buttons_container">
+            <p class="price">Ksh 1,200</p>
+            <button class="shopping_actions">Add to Cart</button>
+            <button class="shopping_actions">View Details</button>
+        </div>
+    </div>
+
+    <div class="shop_item" data-type="games">
+        <img src="IMAGES/software-1.webp" alt="Grand Theft Auto game cover">
+        <h3>Grand Theft Auto (GTA)</h3>
+        <p>Open-world action-adventure series. Installation and mods support.</p>
+        <div class="shopping_buttons_container">
+            <p class="price">Ksh 1,900</p>
+            <button class="shopping_actions">Add to Cart</button>
+            <button class="shopping_actions">View Details</button>
+        </div>
+    </div>
+
+    <div class="shop_item" data-type="games">
+        <img src="IMAGES/software-1.webp" alt="Pro Evolution Soccer game cover">
+        <h3>PES (eFootball)</h3>
+        <p>Football simulation game, rival to FIFA. Installation for PC.</p>
+        <div class="shopping_buttons_container">
+            <p class="price">Ksh 1,300</p>
+            <button class="shopping_actions">Add to Cart</button>
+            <button class="shopping_actions">View Details</button>
+        </div>
+    </div>
+
+    <div class="shop_item" data-type="os">
+        <img src="IMAGES/software-1.webp" alt="Windows OS logo">
+        <h3>Windows OS</h3>
+        <p>Installation and activation for Windows 10 & 11.</p>
+        <div class="shopping_buttons_container">
+            <p class="price">Ksh 2,000</p>
+            <button class="shopping_actions">Add to Cart</button>
+            <button class="shopping_actions">View Details</button>
+        </div>
+    </div>
+
+    <div class="shop_item" data-type="productivity">
+        <img src="IMAGES/software-1.webp" alt="Microsoft Office logo">
+        <h3>Microsoft Office</h3>
+        <p>Office 2021/365 installation and activation.</p>
+        <div class="shopping_buttons_container">
+            <p class="price">Ksh 1,800</p>
+            <button class="shopping_actions">Add to Cart</button>
+            <button class="shopping_actions">View Details</button>
+        </div>
+    </div>
+
+    <div class="shop_item" data-type="design">
+        <img src="IMAGES/software-1.webp" alt="AutoCAD logo">
+        <h3>AutoCAD</h3>
+        <p>Professional design and drafting software. Installation and setup.</p>
+        <div class="shopping_buttons_container">
+            <p class="price">Ksh 2,500</p>
+            <button class="shopping_actions">Add to Cart</button>
+            <button class="shopping_actions">View Details</button>
+        </div>
+    </div>
+
+    <div class="shop_item" data-type="security">
+        <img src="IMAGES/software-1.webp" alt="Antivirus software logo">
+        <h3>Antivirus Software</h3>
+        <p>Top antivirus for protection against malware.</p>
+        <div class="shopping_buttons_container">
+            <p class="price">Ksh 1,000</p>
+            <button class="shopping_actions">Add to Cart</button>
+            <button class="shopping_actions">View Details</button>
+        </div>
+    </div>
+</section>
+
+</main>
+<footer class="main-footer">
+    <div class="footer-content">
+        <div class="footer-section footer-about">
+            <h3>Tsailun Technologies</h3>
+            <p>Quality refurbished laptops and custom builds in Nairobi. Smart tech choices for a smarter planet.</p>
+            <p>Located at Imenti House, Basement Shop No. 14, Tom Mboya Street, Nairobi.</p>
+        </div>
+        <div class="footer-section footer-links">
+            <h3>Quick Links</h3>
+            <ul class="footer-list">
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="warranty.html">Warranty & Returns</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+            </ul>
+        </div>
+        <div class="footer-section footer-nav">
+            <h3>Shop Categories</h3>
+            <ul class="footer-list">
+                <li><a href="laptops.html">Laptops</a></li>
+                <li><a href="softwaress.html">Softwares</a></li>
+                <li><a href="desktops.html">Desktops</a></li>
+                <li><a href="accessories.html">Accessories</a></li>
+                <li><a href="iphones.html">Refurbished iPhones</a></li>
+                <li><a href="repairs.html">Diagnosis And Repair</a></li>
+            </ul>
+        </div>
+        <div class="footer-section footer-contact">
+            <h3>Get in Touch</h3>
+            <p>Email: <a href="mailto:tsailunenterprises@gmail.com">tsailunenterprises@gmail.com</a></p>
+            <p>Phone: <a href="tel:+254784289162">+254 784289162</a></p>
+            <div class="social-links">
+                <a href="#" class="social-icon">Facebook</a> 
+                <a href="#" class="social-icon">Instagram</a>
+                <a href="#" class="social-icon">Twitter</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Your Tsailun Technologies. All rights reserved.</p>
+    </div>
+</footer>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const navToggle = document.getElementById("nav-toggle");
+  const navList = document.getElementById("nav-list");
+  const laptopLink = document.getElementById("laptopLink");
+  const laptopDropdown = document.getElementById("laptopsDropdownMenu");
+
+  // Mobile menu toggle
+  navToggle.addEventListener("click", () => {
+    navList.classList.toggle("active");
+    navToggle.setAttribute(
+      "aria-expanded",
+      navList.classList.contains("active")
+    );
+  });
+
+  // Mobile laptops dropdown toggle
+  laptopLink.addEventListener("click", (e) => {
+    if (window.innerWidth < 769) {
+      e.preventDefault();
+      laptopDropdown.toggleAttribute("hidden");
+    }
+  });
+});
+</script>
+</body>
+</html> 

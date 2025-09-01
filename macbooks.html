@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <LINK rel="stylesheet" href="STYLE.CSS">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+       @import url(softwares.css);
+    </style>
+    <script src="https://kit.fontawesome.com/fcab21f617.js" crossorigin="anonymous"></script>
+    <title>Macbooks</title>
+</head>
+<body>
+<header class="main-header">
+  <!-- Promo / campaign bar -->
+  <div class="campaign1" role="status" aria-live="polite">
+    <p>
+      <span><i class="fa-solid fa-phone"></i></span>
+      <a href="tel:+254784289162">+254 784 289 162</a>
+      Nairobi, Kenya
+      <span><i class="fa-solid fa-truck"></i></span> free delivery Kenya
+      <span><i class="fa-solid fa-shield-halved"></i></span> 1 year warranty
+    </p>
+  </div>
+
+  <!-- Top bar -->
+  <div class="search-and-account2">
+    <div id="logo-plus-search" class="search-and-account2-child">
+      <a href="index.html" class="site-logo" aria-label="tsailun technologies home">
+        <img src="IMAGES/lenovo-logo.avif" alt="tsailun technologies logo">
+      </a>
+
+      
+      <!-- proper form for search -->
+      <form id="search-panel" class="search-and-account2-child" role="search" aria-label="Site search" action="/search" method="GET">
+        <label for="site-search" class="visually-hidden">Search products</label>
+        <input id="site-search" name="q" type="search" placeholder="Search" aria-label="Search the site">
+        <button type="submit" aria-label="Submit search">
+          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        </button>
+      </form>
+
+      <div id="shopping-cart" class="search-and-account2-child">
+        <button type="button" aria-label="View shopping cart">
+          <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <div id="user-account-header" class="search-and-account2-child">
+        <button type="button" aria-label="User login">
+          <i class="fa-solid fa-user" aria-hidden="true"></i>
+        </button>
+        <p>Login</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav class="main-header nav3 sticky-nav" role="navigation" aria-label="Main navigation">
+  <!-- Mobile menu button -->
+  <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="nav-list" aria-label="Open menu">
+    ☰ Menu
+  </button>
+
+    <ul class="nav-list" id="nav-list">
+        <li class="nav-item"><a href="INDEX.HTML" class="nav-link">Home</a></li>
+        <li class="nav-item nav-dropdown">
+            <a href="laptops.html" class="nav-link">Laptops <span aria-hidden="true">▼</span></a>
+            <ul class="dropdown-menu" id="laptopsDropdownMenu" hidden>
+                <li><a href="laptops.html">All Laptops</a></li>
+                <li><a href="laptops-under20k.html">Under 20k</a></li>
+                <li><a href="macbooks.html">Macbooks</a></li>
+                <li><a href="refurbished-laptops.html">Refurbished Laptops</a></li>
+                <li><a href="gaming-laptops.html">Gaming Laptops</a></li>
+            </ul>
+        </li>
+        <li class="nav-item"><a href="softwaress.html" class="nav-link">Softwares</a></li>
+        <li class="nav-item"><a href="desktops.html" class="nav-link">Desktops</a></li>
+        <li class="nav-item"><a href="accessories.html" class="nav-link" aria-current="page">Accessories</a></li>
+        <li class="nav-item"><a href="iphones.html" class="nav-link">iPhones</a></li>
+        <li class="nav-item"><a href="repairs.html" class="nav-link">Repair</a></li>
+    </ul>
+</nav>
+<div class="heroe-software">
+    <img src="IMAGES/images (4).jpg" alt="softwares-hero-image" class="heroe-software-children" alt="macbooks image">
+    <div class="heroe-software-children">
+        <h2>MacBooks</h2>
+        <p class="software-description">Discover our curated collection of MacBooks. We offer a range of powerful and reliable devices for every need.</p>
+    </div>
+</div>
+<main class="main-layout">
+    <!-- Mobile toggle -->
+        <button id="filters-toggle" class="filters-toggle" aria-controls="filters" aria-expanded="false">
+          <i class="fa-solid fa-filter"></i> Filters
+        </button>
+
+          <!-- Sidebar -->
+    <aside class="filters">
+        <h2 class="filters-main-title">Filter Macbooks</h2>
+        <form id="macbook-filters" class="macbook-filters">
+            <div class="filter-category">
+                <h3 class="filter-title">Model</h3>
+                <div class="filter-options--checkbox-list">
+                    <ul class="filter-list">
+                        <li class="filter-list-item">
+                            <input type="checkbox" id="filter-model-air" name="model" value="air" class="filter-input">
+                            <label for="filter-model-air" class="filter-label">MacBook Air</label>
+                        </li>
+                        <li class="filter-list-item">
+                            <input type="checkbox" id="filter-model-pro" name="model" value="pro" class="filter-input">
+                            <label for="filter-model-pro" class="filter-label">MacBook Pro</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="filter-category">
+                <h3 class="filter-title">Processor</h3>
+                <div class="filter-options--checkbox-list">
+                    <ul class="filter-list">
+                        <li class="filter-list-item">
+                            <input type="checkbox" id="filter-processor-m1" name="processor" value="m1" class="filter-input">
+                            <label for="filter-processor-m1" class="filter-label">M1 Chip</label>
+                        </li>
+                        <li class="filter-list-item">
+                            <input type="checkbox" id="filter-processor-m2" name="processor" value="m2" class="filter-input">
+                            <label for="filter-processor-m2" class="filter-label">M2 Chip</label>
+                        </li>
+                        <li class="filter-list-item">
+                            <input type="checkbox" id="filter-processor-intel" name="processor" value="intel" class="filter-input">
+                            <label for="filter-processor-intel" class="filter-label">Intel Core</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="filter-category">
+                <h3 class="filter-title">RAM (GB)</h3>
+                <div class="filter-options--checkbox-list">
+                    <ul class="filter-list">
+                        <li class="filter-list-item"><input type="checkbox" id="filter-ram-8" name="ram" value="8" class="filter-input"><label for="filter-ram-8" class="filter-label">8GB</label></li>
+                        <li class="filter-list-item"><input type="checkbox" id="filter-ram-16" name="ram" value="16" class="filter-input"><label for="filter-ram-16" class="filter-label">16GB</label></li>
+                        <li class="filter-list-item"><input type="checkbox" id="filter-ram-32" name="ram" value="32" class="filter-input"><label for="filter-ram-32" class="filter-label">32GB+</label></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="filter-category--actions">
+                <button type="submit" class="filter-button filter-button--apply">Apply Filters</button>
+                <button type="reset" class="filter-button filter-button--clear">Clear Filters</button>
+            </div>
+        </form>
+    </aside>
+
+    <section id="general_display">
+        <div class="shop_item">
+            <div class="offer_badge flash_sale_badge">Flash Sale</div>
+            <img src="IMAGES/Apple-1322-MacBook-Air-M4-Sky-Blue-.webp" alt="MacBook Air M1">
+            <h3>MacBook Air M1</h3>
+            <p>8GB RAM, 256GB SSD. Ideal for everyday use and light creative tasks.</p>
+            <div class="shopping_buttons_container">
+                <p class="price">Ksh 105,000</p>
+                <button class="shopping_actions">Add to Cart</button>
+                <button class="shopping_actions">Buy Now</button>
+                <button class="shopping_actions">View Details</button>
+                <button class="shopping_actions">Customize</button>
+            </div>
+        </div>
+        <div class="shop_item">
+            <div class="offer_badge top_pick_badge">Top Pick</div>
+            <img src="IMAGES/Apple-1322-MacBook-Air-M4-Sky-Blue-.webp" alt="MacBook Pro M2">
+            <h3>MacBook Pro M2</h3>
+            <p>16GB RAM, 512GB SSD. Powerful performance for professionals.</p>
+            <div class="shopping_buttons_container">
+                <p class="price">Ksh 180,000</p>
+                <button class="shopping_actions">Add to Cart</button>
+                <button class="shopping_actions">Buy Now</button>
+                <button class="shopping_actions">View Details</button>
+                <button class="shopping_actions">Customize</button>
+            </div>
+        </div>
+        <div class="shop_item">
+            <img src="IMAGES/Apple-1322-MacBook-Air-M4-Sky-Blue-.webp"alt="MacBook Air M2">
+            <h3>MacBook Air M2</h3>
+            <p>16GB RAM, 512GB SSD. Sleek design with enhanced power.</p>
+            <div class="shopping_buttons_container">
+                <p class="price">Ksh 145,000</p>
+                <button class="shopping_actions">Add to Cart</button>
+                <button class="shopping_actions">Buy Now</button>
+                <button class="shopping_actions">View Details</button>
+                <button class="shopping_actions">Customize</button>
+            </div>
+        </div>
+        <div class="shop_item">
+            <img src="IMAGES/Apple-1322-MacBook-Air-M4-Sky-Blue-.webp"alt="MacBook Pro Intel">
+            <h3>MacBook Pro Intel</h3>
+            <p>16GB RAM, 256GB SSD. Classic model, excellent condition.</p>
+            <div class="shopping_buttons_container">
+                <p class="price">Ksh 95,000</p>
+                <button class="shopping_actions">Add to Cart</button>
+                <button class="shopping_actions">Buy Now</button>
+                <button class="shopping_actions">View Details</button>
+                <button class="shopping_actions">Customize</button>
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="main-footer">
+    <div class="footer-content">
+        <div class="footer-section footer-about">
+            <h3>Tsailun Technologies</h3>
+            <p>Quality refurbished laptops and custom builds in Nairobi. Smart tech choices for a smarter planet.</p>
+            <p>Located at Imenti House, Basement Shop No. 14, Tom Mboya Street, Nairobi.</p>
+        </div>
+        <div class="footer-section footer-links">
+            <h3>Quick Links</h3>
+            <ul class="footer-list">
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="warranty.html">Warranty & Returns</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+            </ul>
+        </div>
+        <div class="footer-section footer-nav">
+            <h3>Shop Categories</h3>
+            <ul class="footer-list">
+                <li><a href="laptops.html">Laptops</a></li>
+                <li><a href="softwaress.html">Softwares</a></li>
+                <li><a href="desktops.html">Desktops</a></li>
+                <li><a href="accessories.html">Accessories</a></li>
+                <li><a href="iphones.html">Refurbished iPhones</a></li>
+                <li><a href="repairs.html">Diagnosis And Repair</a></li>
+            </ul>
+        </div>
+        <div class="footer-section footer-contact">
+            <h3>Get in Touch</h3>
+            <p>Email: <a href="mailto:tsailunenterprises@gmail.com">tsailunenterprises@gmail.com</a></p>
+            <p>Phone: <a href="tel:+254784289162">+254 784289162</a></p>
+            <div class="social-links">
+                <a href="#" class="social-icon">Facebook</a> 
+                <a href="#" class="social-icon">Instagram</a>
+                <a href="#" class="social-icon">Twitter</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Your Tsailun Technologies. All rights reserved.</p>
+    </div>
+</footer>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const navToggle = document.getElementById("nav-toggle");
+  const navList = document.getElementById("nav-list");
+  const laptopLink = document.getElementById("laptopLink");
+  const laptopDropdown = document.getElementById("laptopsDropdownMenu");
+
+  // Mobile menu toggle
+  navToggle.addEventListener("click", () => {
+    navList.classList.toggle("active");
+    navToggle.setAttribute(
+      "aria-expanded",
+      navList.classList.contains("active")
+    );
+  });
+
+  // Mobile laptops dropdown toggle
+  laptopLink.addEventListener("click", (e) => {
+    if (window.innerWidth < 769) {
+      e.preventDefault();
+      laptopDropdown.toggleAttribute("hidden");
+    }
+  });
+});
+</script>
+</body>
+</html>

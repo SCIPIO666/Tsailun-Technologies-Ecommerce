@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <LINK rel="stylesheet" href="STYLE.CSS">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fcab21f617.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>tsailun-Technologies</title>
+</head>
+<body>
+<header class="main-header">
+  <!-- Promo / campaign bar -->
+  <div class="campaign1" role="status" aria-live="polite">
+    <p>
+      <span><i class="fa-solid fa-phone"></i></span>
+      <a href="tel:+254784289162">+254 784 289 162</a>
+      Nairobi, Kenya
+      <span><i class="fa-solid fa-truck"></i></span> free delivery Kenya
+      <span><i class="fa-solid fa-shield-halved"></i></span> 1 year warranty
+    </p>
+  </div>
+
+  <!-- Top bar -->
+  <div class="search-and-account2">
+    <div id="logo-plus-search" class="search-and-account2-child">
+      <a href="index.html" class="site-logo" aria-label="tsailun technologies home">
+        <img src="IMAGES/lenovo-logo.avif" alt="tsailun technologies logo">
+      </a>
+
+      
+      <!-- proper form for search -->
+      <form id="search-panel" class="search-and-account2-child" role="search" aria-label="Site search" action="/search" method="GET">
+        <label for="site-search" class="visually-hidden">Search products</label>
+        <input id="site-search" name="q" type="search" placeholder="Search" aria-label="Search the site">
+        <button type="submit" aria-label="Submit search">
+          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        </button>
+      </form>
+
+      <div id="shopping-cart" class="search-and-account2-child">
+        <button type="button" aria-label="View shopping cart">
+          <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <div id="user-account-header" class="search-and-account2-child">
+        <button type="button" aria-label="User login">
+          <i class="fa-solid fa-user" aria-hidden="true"></i>
+        </button>
+        <p>Login</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav class="main-header nav3 sticky-nav" role="navigation" aria-label="Main navigation">
+  <!-- Mobile menu button -->
+  <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="nav-list" aria-label="Open menu">
+    ☰ Menu
+  </button>
+
+    <ul class="nav-list" id="nav-list">
+        <li class="nav-item"><a href="INDEX.HTML" class="nav-link">Home</a></li>
+        <li class="nav-item nav-dropdown">
+            <a href="laptops.html" class="nav-link">Laptops <span aria-hidden="true">▼</span></a>
+            <ul class="dropdown-menu" id="laptopsDropdownMenu" hidden>
+                <li><a href="laptops.html">All Laptops</a></li>
+                <li><a href="laptops-under20k.html">Under 20k</a></li>
+                <li><a href="macbooks.html">Macbooks</a></li>
+                <li><a href="refurbished-laptops.html">Refurbished Laptops</a></li>
+                <li><a href="gaming-laptops.html">Gaming Laptops</a></li>
+            </ul>
+        </li>
+        <li class="nav-item"><a href="softwaress.html" class="nav-link">Softwares</a></li>
+        <li class="nav-item"><a href="desktops.html" class="nav-link">Desktops</a></li>
+        <li class="nav-item"><a href="accessories.html" class="nav-link" aria-current="page">Accessories</a></li>
+        <li class="nav-item"><a href="iphones.html" class="nav-link">iPhones</a></li>
+        <li class="nav-item"><a href="repairs.html" class="nav-link">Repair</a></li>
+    </ul>
+</nav>
+
+<section id="heroe-container" class="heroe4" aria-labelledby="hero-heading">
+  <div class="container">
+    <h2 id="hero-heading">OUR SERVICES</h2>
+
+    <div class="hero-grid" role="list">
+      <article class="heroe-child hero-card" role="listitem" tabindex="0" aria-labelledby="repairs-title">
+        <div class="services-icons" aria-hidden="true">
+          <i class="fa-solid fa-screwdriver-wrench"></i>
+        </div>
+        <h3 id="repairs-title">Laptop Repairs</h3>
+        <p class="services-description">Expert diagnostics and repair for all laptop makes and models, from hardware fixes to software troubleshooting.</p>
+      </article>
+
+      <article class="heroe-child hero-card" role="listitem" tabindex="0" aria-labelledby="custom-title">
+        <div class="services-icons" aria-hidden="true">
+          <i class="fa-solid fa-laptop-code"></i>
+        </div>
+        <h3 id="custom-title">Laptop Customization</h3>
+        <p class="services-description">Tailor your laptop's performance and aesthetics with upgrades, personalized configurations, and unique modifications.</p>
+      </article>
+
+      <article class="heroe-child hero-card" role="listitem" tabindex="0" aria-labelledby="refurb-title">
+        <div class="services-icons" aria-hidden="true">
+          <i class="fa-solid fa-laptop"></i>
+        </div>
+        <h3 id="refurb-title">Refurbished Laptops</h3>
+        <p class="services-description">High-quality, pre-owned laptops thoroughly tested and restored to excellent working condition.</p>
+      </article>
+
+      <article class="heroe-child hero-card" role="listitem" tabindex="0" aria-labelledby="iphones-title">
+        <div class="services-icons" aria-hidden="true">
+          <i class="fa-solid fa-mobile-screen-button"></i>
+        </div>
+        <h3 id="iphones-title">Refurbished iPhones</h3>
+        <p class="services-description">Affordable, certified pre-owned iPhones, inspected and restored to like-new functionality and appearance.</p>
+      </article>
+
+      <article class="heroe-child hero-card" role="listitem" tabindex="0" aria-labelledby="software-title">
+        <div class="services-icons" aria-hidden="true">
+          <i class="fa-solid fa-code"></i>
+        </div>
+        <h3 id="software-title">SOFTWARE</h3>
+        <p class="services-description">Installation, troubleshooting, and optimization of operating systems and applications.</p>
+      </article>
+
+      <article class="heroe-child hero-card" role="listitem" tabindex="0" aria-labelledby="accessories-title">
+        <div class="services-icons" aria-hidden="true">
+          <i class="fa-solid fa-plug"></i>
+        </div>
+        <h3 id="accessories-title">Laptop Accessories</h3>
+        <p class="services-description">Chargers, external drives, keyboards, mice, and bags to complement your setup.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<main id="side-by-side-layout">
+
+
+       <!-- Mobile toggle -->
+        <button id="filters-toggle" class="filters-toggle" aria-controls="filters" aria-expanded="false">
+          <i class="fa-solid fa-filter"></i> Filters
+        </button>
+
+          <!-- Sidebar -->
+          <aside id="filters" class="filters">
+            <h1 class="filters-main-title">Laptops</h1>
+
+            <!-- Laptop Type Filter Category -->
+            <div class="filter-category">
+
+              <h3 class="filter-title">Laptop Type</h3>
+
+              <div class="filter-options filter-options--checkbox-list">
+                <ul class="filter-list">
+                  <li class="filter-list-item">
+                    <input type="checkbox" id="type-gaming" value="gaming-laptops" class="filter-input">
+                    <label for="type-gaming" class="filter-label">Gaming Laptops</label>
+                  </li>
+                  <li class="filter-list-item">
+                    <input type="checkbox" id="type-business" value="business-laptops" class="filter-input">
+                    <label for="type-business" class="filter-label">Business Laptops</label>
+                  </li>
+                  <li class="filter-list-item">
+                    <input type="checkbox" id="type-student" value="student-laptops" class="filter-input">
+                    <label for="type-student" class="filter-label">Student Laptops</label>
+                  </li>
+                  <li class="filter-list-item">
+                    <input type="checkbox" id="type-budget" value="entry-level-budget-laptops" class="filter-input">
+                    <label for="type-budget" class="filter-label">Entry-Level/Budget Laptops</label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Price Filter Category -->
+            <div class="filter-category">
+              <h3 class="filter-title">Price</h3>
+              <div class="filter-options filter-options--range">
+                <input type="range" id="price-range" min="5000" max="200000" value="100000" class="filter-range-input">
+                <p class="filter-range-display">
+                  KSh <span id="min-price">5,000</span> - <span id="max-price">100,000</span>
+                </p>
+              </div>
+            </div>
+
+            <!-- Brand Filter Category -->
+            <div class="filter-category">
+              <h3 class="filter-title">Brand</h3>
+              <div class="filter-options filter-options--checkbox-list">
+                <ul class="filter-list">
+                  <li class="filter-list-item"><input type="checkbox" id="brand-dell" value="Dell" class="filter-input"><label for="brand-dell" class="filter-label">Dell</label></li>
+                  <li class="filter-list-item"><input type="checkbox" id="brand-hp" value="HP" class="filter-input"><label for="brand-hp" class="filter-label">HP</label></li>
+                  <li class="filter-list-item"><input type="checkbox" id="brand-lenovo" value="Lenovo" class="filter-input"><label for="brand-lenovo" class="filter-label">Lenovo</label></li>
+                  <li class="filter-list-item"><input type="checkbox" id="brand-apple" value="Apple" class="filter-input"><label for="brand-apple" class="filter-label">Apple</label></li>
+                  <li class="filter-list-item"><input type="checkbox" id="brand-acer" value="Acer" class="filter-input"><label for="brand-acer" class="filter-label">Acer</label></li>
+                  <li class="filter-list-item"><input type="checkbox" id="brand-asus" value="Asus" class="filter-input"><label for="brand-asus" class="filter-label">Asus</label></li>
+                  <li class="filter-list-item"><input type="checkbox" id="brand-microsoft" value="Microsoft" class="filter-input"><label for="brand-microsoft" class="filter-label">Microsoft Surface</label></li>
+                  <li class="filter-list-item"><input type="checkbox" id="brand-huawei" value="Huawei" class="filter-input"><label for="brand-huawei" class="filter-label">Huawei</label></li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- (keep the rest of your categories as is: OS, Processor, RAM, Storage, Screen Size, etc.) -->
+
+            <!-- Action Buttons -->
+            <div class="filter-category filter-category--actions">
+              <button type="submit" class="filter-button filter-button--apply">Apply Filters</button>
+              <button type="reset" class="filter-button filter-button--clear">Clear Filters</button>
+            </div>
+          </aside>
+
+
+    <div id="general_display">
+        <div class="shop_item laptop">
+
+            <img alt="laptop image" src="images/laptop.jpg">
+
+            <h3>Dell Inspiron 15.6" Business Laptop,Intel Core i3-1215U,32GB RAM,2TB SSD,WiFi 6,Windows 11 Home</h3>
+
+            <p>kshs <spin class="price">15,000</spin></p>
+
+            <div class="shopping_buttons_container">
+                <button class="shopping_actions" type="submit">customize</button>
+                <button class="shopping_actions" type="submit">add to cart</button>
+                <button class="shopping_actions" type="submit">view details</button>
+                <button class="shopping_actions" type="submit">buy now</button>
+
+            </div>
+            <div class="promotion_offer_badge">
+                <p>15% off</p>
+            </div>
+        </div>
+
+
+         <div class="shop_item laptop">
+
+            <img alt="laptop image" src="laptop.jpg">
+
+            <h3>Dell Inspiron 15.6" Business Laptop,Intel Core i3-1215U,32GB RAM,2TB SSD,WiFi 6,Windows 11 Home</h3>
+
+            <p>kshs <spin class="price">15,000</spin></p>
+
+            <div class="shopping_buttons_container">
+                <button class="shopping_actions" type="submit">customize</button>
+                <button class="shopping_actions" type="submit">add to cart</button>
+                <button class="shopping_actions" type="submit">view details</button>
+                <button class="shopping_actions" type="submit">buy now</button>
+
+            </div>
+            <div class="promotion_offer_badge">
+                <p>15% discount</p>
+            </div>
+        </div>
+
+         <div class="shop_item laptop">
+
+            <img alt="laptop image" src="laptop.jpg">
+
+            <h3>Dell Inspiron 15.6" Business Laptop,Intel Core i3-1215U,32GB RAM,2TB SSD,WiFi 6,Windows 11 Home</h3>
+
+            <p>kshs <spin class="price">15,000</spin></p>
+
+            <div class="shopping_buttons_container">
+                <button class="shopping_actions" type="submit">customize</button>
+                <button class="shopping_actions" type="submit">add to cart</button>
+                <button class="shopping_actions" type="submit">view details</button>
+                <button class="shopping_actions" type="submit">buy now</button>
+
+            </div>
+            <div class="promotion_offer_badge">
+                <p>15% discount</p>
+            </div>
+        </div>
+
+         <div class="shop_item laptop">
+
+            <img alt="laptop image" src="laptop.jpg">
+
+            <h3>Dell Inspiron 15.6" Business Laptop,Intel Core i3-1215U,32GB RAM,2TB SSD,WiFi 6,Windows 11 Home</h3>
+
+            <p>kshs <spin class="price">15,000</spin></p>
+
+            <div class="shopping_buttons_container">
+                <button class="shopping_actions" type="submit">customize</button>
+                <button class="shopping_actions" type="submit">add to cart</button>
+                <button class="shopping_actions" type="submit">view details</button>
+                <button class="shopping_actions" type="submit">buy now</button>
+
+            </div>
+            <div class="promotion_offer_badge">
+                <p>15% discount</p>
+            </div>
+        </div>
+
+         <div class="shop_item laptop">
+
+            <img alt="laptop image" src="laptop.jpg">
+
+            <h3>Dell Inspiron 15.6" Business Laptop,Intel Core i3-1215U,32GB RAM,2TB SSD,WiFi 6,Windows 11 Home</h3>
+
+            <p>kshs <spin class="price">15,000</spin></p>
+
+            <div class="shopping_buttons_container">
+                <button class="shopping_actions" type="submit">customize</button>
+                <button class="shopping_actions" type="submit">add to cart</button>
+                <button class="shopping_actions" type="submit">view details</button>
+                <button class="shopping_actions" type="submit">buy now</button>
+
+            </div>
+            <div class="promotion_offer_badge">
+                <p>15% discount</p>
+            </div>
+        </div>
+         <div class="shop_item laptop">
+
+            <img alt="laptop image" src="laptop.jpg">
+
+            <h3>Dell Inspiron 15.6" Business Laptop,Intel Core i3-1215U,32GB RAM,2TB SSD,WiFi 6,Windows 11 Home</h3>
+
+            <p>kshs <spin class="price">15,000</spin></p>
+
+            <div class="shopping_buttons_container">
+                <button class="shopping_actions" type="submit">customize</button>
+                <button class="shopping_actions" type="submit">add to cart</button>
+                <button class="shopping_actions" type="submit">view details</button>
+                <button class="shopping_actions" type="submit">buy now</button>
+
+            </div>
+            <div class="promotion_offer_badge">
+                <p>15% discount</p>
+            </div>
+        </div>
+
+         <div class="shop_item laptop">
+
+            <img alt="laptop image" src="laptop.jpg">
+
+            <h3>Dell Inspiron 15.6" Business Laptop,Intel Core i3-1215U,32GB RAM,2TB SSD,WiFi 6,Windows 11 Home</h3>
+
+            <p>kshs <spin class="price">15,000</spin></p>
+
+            <div class="shopping_buttons_container">
+                <button class="shopping_actions" type="submit">customize</button>
+                <button class="shopping_actions" type="submit">add to cart</button>
+                <button class="shopping_actions" type="submit">view details</button>
+                <button class="shopping_actions" type="submit">buy now</button>
+
+            </div>
+            <div class="promotion_offer_badge">
+                <p>15% discount</p>
+            </div>
+        </div>
+
+         <div class="shop_item laptop">
+
+            <img alt="laptop image" src="laptop.jpg">
+
+            <h3>Dell Inspiron 15.6" Business Laptop,Intel Core i3-1215U,32GB RAM,2TB SSD,WiFi 6,Windows 11 Home</h3>
+
+            <p>kshs <spin class="price">15,000</spin></p>
+
+            <div class="shopping_buttons_container">
+                <button class="shopping_actions" type="submit">customize</button>
+                <button class="shopping_actions" type="submit">add to cart</button>
+                <button class="shopping_actions" type="submit">view details</button>
+                <button class="shopping_actions" type="submit">buy now</button>
+
+            </div>
+            <div class="promotion_offer_badge">
+                <p>15% discount</p>
+            </div>
+        </div>
+
+         <div class="shop_item laptop">
+
+            <img alt="laptop image" src="laptop.jpg">
+
+            <h3>Dell Inspiron 15.6" Business Laptop,Intel Core i3-1215U,32GB RAM,2TB SSD,WiFi 6,Windows 11 Home</h3>
+
+            <p>kshs <spin class="price">15,000</spin></p>
+
+            <div class="shopping_buttons_container">
+                <button class="shopping_actions" type="submit">customize</button>
+                <button class="shopping_actions" type="submit">add to cart</button>
+                <button class="shopping_actions" type="submit">view details</button>
+                <button class="shopping_actions" type="submit">buy now</button>
+
+            </div>
+            <div class="promotion_offer_badge">
+                <p>15% discount</p>
+            </div>
+        </div>
+
+         <div class="shop_item laptop">
+
+            <img alt="laptop image" src="laptop.jpg">
+
+            <h3>Dell Inspiron 15.6" Business Laptop,Intel Core i3-1215U,32GB RAM,2TB SSD,WiFi 6,Windows 11 Home</h3>
+
+            <p>kshs <spin class="price">15,000</spin></p>
+
+            <div class="shopping_buttons_container">
+                <button class="shopping_actions" type="submit">customize</button>
+                <button class="shopping_actions" type="submit">add to cart</button>
+                <button class="shopping_actions" type="submit">view details</button>
+                <button class="shopping_actions" type="submit">buy now</button>
+
+            </div>
+            <div class="promotion_offer_badge">
+                <p>15% discount</p>
+            </div>
+        </div>
+
+         <div class="shop_item laptop">
+
+            <img alt="laptop image" src="laptop.jpg">
+
+            <h3>Dell Inspiron 15.6" Business Laptop,Intel Core i3-1215U,32GB RAM,2TB SSD,WiFi 6,Windows 11 Home</h3>
+
+            <p>kshs <spin class="price">15,000</spin></p>
+
+            <div class="shopping_buttons_container">
+                <button class="shopping_actions" type="submit">customize</button>
+                <button class="shopping_actions" type="submit">add to cart</button>
+                <button class="shopping_actions" type="submit">view details</button>
+                <button class="shopping_actions" type="submit">buy now</button>
+
+            </div>
+            <div class="promotion_offer_badge">
+                <p>15% discount</p>
+            </div>
+        </div>
+
+         <div class="shop_item laptop">
+
+            <img alt="laptop image" src="laptop.jpg">
+
+            <h3>Dell Inspiron 15.6" Business Laptop,Intel Core i3-1215U,32GB RAM,2TB SSD,WiFi 6,Windows 11 Home</h3>
+
+            <p>kshs <spin class="price">15,000</spin></p>
+
+            <div class="shopping_buttons_container">
+                <button class="shopping_actions" type="submit">customize</button>
+                <button class="shopping_actions" type="submit">add to cart</button>
+                <button class="shopping_actions" type="submit">view details</button>
+                <button class="shopping_actions" type="submit">buy now</button>
+
+            </div>
+            <div class="promotion_offer_badge">
+                <p>15% discount</p>
+            </div>
+        </div>
+
+         <div class="shop_item laptop">
+
+            <img alt="laptop image" src="laptop.jpg">
+
+            <h3>Dell Inspiron 15.6" Business Laptop,Intel Core i3-1215U,32GB RAM,2TB SSD,WiFi 6,Windows 11 Home</h3>
+
+            <p>kshs <spin class="price">15,000</spin></p>
+
+            <div class="shopping_buttons_container">
+                <button class="shopping_actions" type="submit">customize</button>
+                <button class="shopping_actions" type="submit">add to cart</button>
+                <button class="shopping_actions" type="submit">view details</button>
+                <button class="shopping_actions" type="submit">buy now</button>
+
+            </div>
+            <div class="promotion_offer_badge">
+                <p>15% discount</p>
+            </div>
+        </div>
+
+         <div class="shop_item laptop">
+
+            <img alt="laptop image" src="laptop.jpg">
+
+            <h3>Dell Inspiron 15.6" Business Laptop,Intel Core i3-1215U,32GB RAM,2TB SSD,WiFi 6,Windows 11 Home</h3>
+
+            <p>kshs <spin class="price">15,000</spin></p>
+
+            <div class="shopping_buttons_container">
+                <button class="shopping_actions" type="submit">customize</button>
+                <button class="shopping_actions" type="submit">add to cart</button>
+                <button class="shopping_actions" type="submit">view details</button>
+                <button class="shopping_actions" type="submit">buy now</button>
+
+            </div>
+            <div class="promotion_offer_badge">
+                <p>15% discount</p>
+            </div>
+        </div>
+
+         <div class="shop_item laptop">
+
+            <img alt="laptop image" src="laptop.jpg">
+
+            <h3>Dell Inspiron 15.6" Business Laptop,Intel Core i3-1215U,32GB RAM,2TB SSD,WiFi 6,Windows 11 Home</h3>
+
+            <p>kshs <spin class="price">15,000</spin></p>
+
+            <div class="shopping_buttons_container">
+                <button class="shopping_actions" type="submit">customize</button>
+                <button class="shopping_actions" type="submit">add to cart</button>
+                <button class="shopping_actions" type="submit">view details</button>
+                <button class="shopping_actions" type="submit">buy now</button>
+
+            </div>
+            <div class="promotion_offer_badge">
+                <p>15% discount</p>
+            </div>
+        </div>
+
+    
+
+  </div>   
+</main>
+
+<footer class="main-footer">
+    <div class="footer-content">
+        <div class="footer-section footer-about">
+            <h3>Tsailun Technologies</h3>
+            <p>Quality refurbished laptops and custom builds in Nairobi. Smart tech choices for a smarter planet.</p>
+            <p>Located at Imenti House, Basement Shop No. 14, Tom Mboya Street, Nairobi.</p>
+        </div>
+        <div class="footer-section footer-links">
+            <h3>Quick Links</h3>
+            <ul class="footer-list">
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="warranty.html">Warranty & Returns</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+            </ul>
+        </div>
+        <div class="footer-section footer-nav">
+            <h3>Shop Categories</h3>
+            <ul class="footer-list">
+                <li><a href="laptops.html">Laptops</a></li>
+                <li><a href="softwaress.html">Softwares</a></li>
+                <li><a href="desktops.html">Desktops</a></li>
+                <li><a href="accessories.html">Accessories</a></li>
+                <li><a href="iphones.html">Refurbished iPhones</a></li>
+                <li><a href="repairs.html">Diagnosis And Repair</a></li>
+            </ul>
+        </div>
+        <div class="footer-section footer-contact">
+            <h3>Get in Touch</h3>
+            <p>Email: <a href="mailto:tsailunenterprises@gmail.com">tsailunenterprises@gmail.com</a></p>
+            <p>Phone: <a href="tel:+254784289162">+254 784289162</a></p>
+            <div class="social-links">
+                <a href="#" class="social-icon">Facebook</a> 
+                <a href="#" class="social-icon">Instagram</a>
+                <a href="#" class="social-icon">Twitter</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Your Tsailun Technologies. All rights reserved.</p>
+    </div>
+</footer>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const navToggle = document.getElementById("nav-toggle");
+  const navList = document.getElementById("nav-list");
+  const laptopLink = document.getElementById("laptopLink");
+  const laptopDropdown = document.getElementById("laptopsDropdownMenu");
+
+  // Mobile menu toggle
+  navToggle.addEventListener("click", () => {
+    navList.classList.toggle("active");
+    navToggle.setAttribute(
+      "aria-expanded",
+      navList.classList.contains("active")
+    );
+  });
+
+  // Mobile laptops dropdown toggle
+  laptopLink.addEventListener("click", (e) => {
+    if (window.innerWidth < 769) {
+      e.preventDefault();
+      laptopDropdown.toggleAttribute("hidden");
+    }
+  });
+});
+</script>
+
+
+
+
+</body>
+</html>

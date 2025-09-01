@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <LINK rel="stylesheet" href="STYLE.CSS">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+     <style>
+       @import url(softwares.css);
+    </style>
+    <script src="https://kit.fontawesome.com/fcab21f617.js" crossorigin="anonymous"></script>
+    <title>Desktops</title>
+</head>
+<body>
+<header class="main-header">
+  <!-- Promo / campaign bar -->
+  <div class="campaign1" role="status" aria-live="polite">
+    <p>
+      <span><i class="fa-solid fa-phone"></i></span>
+      <a href="tel:+254784289162">+254 784 289 162</a>
+      Nairobi, Kenya
+      <span><i class="fa-solid fa-truck"></i></span> free delivery Kenya
+      <span><i class="fa-solid fa-shield-halved"></i></span> 1 year warranty
+    </p>
+  </div>
+
+  <!-- Top bar -->
+  <div class="search-and-account2">
+    <div id="logo-plus-search" class="search-and-account2-child">
+      <a href="index.html" class="site-logo" aria-label="tsailun technologies home">
+        <img src="IMAGES/lenovo-logo.avif" alt="tsailun technologies logo">
+      </a>
+
+      
+      <!-- proper form for search -->
+      <form id="search-panel" class="search-and-account2-child" role="search" aria-label="Site search" action="/search" method="GET">
+        <label for="site-search" class="visually-hidden">Search products</label>
+        <input id="site-search" name="q" type="search" placeholder="Search" aria-label="Search the site">
+        <button type="submit" aria-label="Submit search">
+          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        </button>
+      </form>
+
+      <div id="shopping-cart" class="search-and-account2-child">
+        <button type="button" aria-label="View shopping cart">
+          <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <div id="user-account-header" class="search-and-account2-child">
+        <button type="button" aria-label="User login">
+          <i class="fa-solid fa-user" aria-hidden="true"></i>
+        </button>
+        <p>Login</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav class="main-header nav3 sticky-nav" role="navigation" aria-label="Main navigation">
+  <!-- Mobile menu button -->
+  <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="nav-list" aria-label="Open menu">
+    ☰ Menu
+  </button>
+
+    <ul class="nav-list" id="nav-list">
+        <li class="nav-item"><a href="INDEX.HTML" class="nav-link">Home</a></li>
+        <li class="nav-item nav-dropdown">
+            <a href="laptops.html" class="nav-link">Laptops <span aria-hidden="true">▼</span></a>
+            <ul class="dropdown-menu" id="laptopsDropdownMenu" hidden>
+                <li><a href="laptops.html">All Laptops</a></li>
+                <li><a href="laptops-under20k.html">Under 20k</a></li>
+                <li><a href="macbooks.html">Macbooks</a></li>
+                <li><a href="refurbished-laptops.html">Refurbished Laptops</a></li>
+                <li><a href="gaming-laptops.html">Gaming Laptops</a></li>
+            </ul>
+        </li>
+        <li class="nav-item"><a href="softwaress.html" class="nav-link">Softwares</a></li>
+        <li class="nav-item"><a href="desktops.html" class="nav-link">Desktops</a></li>
+        <li class="nav-item"><a href="accessories.html" class="nav-link" aria-current="page">Accessories</a></li>
+        <li class="nav-item"><a href="iphones.html" class="nav-link">iPhones</a></li>
+        <li class="nav-item"><a href="repairs.html" class="nav-link">Repair</a></li>
+    </ul>
+</nav>
+<div class="heroe-software">
+    <img src="IMAGES/desktops-o.avif" alt="desktops hero image" class="heroe-software-children">
+    <div class="heroe-software-children">
+        <h2>Desktop Computers</h2>
+        <p class="software-description">Powerful and reliable desktop computers for your home or office. Find the perfect machine for work, gaming, or creative tasks.</p>
+    </div>
+</div>
+<main>
+   <!-- Mobile toggle -->
+        <button id="filters-toggle" class="filters-toggle" aria-controls="filters" aria-expanded="false">
+          <i class="fa-solid fa-filter"></i> Filters
+        </button>
+
+          <!-- Sidebar -->
+        <aside class="filters">
+        <h1 class="filters-main-title">Desktops</h1>
+
+        <div class="filter-category">
+            <h3 class="filter-title">Desktop Type</h3>
+            <div class="filter-options filter-options--checkbox-list">
+                <ul class="filter-list">
+                    <li class="filter-list-item">
+                        <input type="checkbox" id="desktop-type-gaming" value="gaming-desktops" class="filter-input">
+                        <label for="desktop-type-gaming" class="filter-label">Gaming Desktops</label>
+                    </li>
+                    <li class="filter-list-item">
+                        <input type="checkbox" id="desktop-type-business" value="business-desktops" class="filter-input">
+                        <label for="desktop-type-business" class="filter-label">Business Desktops</label>
+                    </li>
+                    <li class="filter-list-item">
+                        <input type="checkbox" id="desktop-type-aio" value="all-in-one-pcs" class="filter-input">
+                        <label for="desktop-type-aio" class="filter-label">All-in-One PCs</label>
+                    </li>
+                    <li class="filter-list-item">
+                        <input type="checkbox" id="desktop-type-mini" value="mini-pcs" class="filter-input">
+                        <label for="desktop-type-mini" class="filter-label">Mini PCs</label>
+                    </li>
+                    <li class="filter-list-item">
+                        <input type="checkbox" id="desktop-type-workstation" value="workstation-desktops" class="filter-input">
+                        <label for="desktop-type-workstation" class="filter-label">Workstation Desktops</label>
+                    </li>
+                    <li class="filter-list-item">
+                        <input type="checkbox" id="desktop-type-budget" value="entry-level-budget-desktops" class="filter-input">
+                        <label for="desktop-type-budget" class="filter-label">Entry-Level/Budget Desktops</label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="filter-category">
+            <h3 class="filter-title">Price</h3>
+            <div class="filter-options filter-options--range">
+                <input type="range" id="desktop-price-range" min="15000" max="500000" value="200000" class="filter-range-input">
+                <p class="filter-range-display">KSh <span id="desktop-min-price">15,000</span> - <span id="desktop-max-price">500,000</span></p>
+            </div>
+        </div>
+
+        <div class="filter-category">
+            <h3 class="filter-title">Brand</h3>
+            <div class="filter-options filter-options--checkbox-list">
+                <ul class="filter-list">
+                    <li class="filter-list-item"><input type="checkbox" id="desktop-brand-dell" value="Dell" class="filter-input"><label for="desktop-brand-dell" class="filter-label">Dell</label></li>
+                    <li class="filter-list-item"><input type="checkbox" id="desktop-brand-hp" value="HP" class="filter-input"><label for="desktop-brand-hp" class="filter-label">HP</label></li>
+                    <li class="filter-list-item"><input type="checkbox" id="desktop-brand-lenovo" value="Lenovo" class="filter-input"><label for="desktop-brand-lenovo" class="filter-label">Lenovo</label></li>
+                    <li class="filter-list-item"><input type="checkbox" id="desktop-brand-apple" value="Apple" class="filter-input"><label for="desktop-brand-apple" class="filter-label">Apple (iMac/Mac Mini)</label></li>
+                    <li class="filter-list-item"><input type="checkbox" id="desktop-brand-acer" value="Acer" class="filter-input"><label for="desktop-brand-acer" class="filter-label">Acer</label></li>
+                    <li class="filter-list-item"><input type="checkbox" id="desktop-brand-asus" value="Asus" class="filter-input"><label for="desktop-brand-asus" class="filter-label">Asus</label></li>
+                    <li class="filter-list-item"><input type="checkbox" id="desktop-brand-microsoft" value="Microsoft" class="filter-input"><label for="desktop-brand-microsoft" class="filter-label">Microsoft (Surface Studio)</label></li>
+                    <li class="filter-list-item"><input type="checkbox" id="desktop-brand-huawei" value="Huawei" class="filter-input"><label for="desktop-brand-huawei" class="filter-label">Huawei</label></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="filter-category">
+            <h3 class="filter-title">Case Material</h3>
+            <div class="filter-options filter-options--checkbox-list">
+                <ul class="filter-list">
+                    <li class="filter-list-item">
+                        <input type="checkbox" id="desktop-material-aluminum" value="aluminum" class="filter-input">
+                        <label for="desktop-material-aluminum" class="filter-label">Aluminum</label>
+                    </li>
+                    <li class="filter-list-item">
+                        <input type="checkbox" id="desktop-material-plastic" value="plastic" class="filter-input">
+                        <label for="desktop-material-plastic" class="filter-label">Plastic</label>
+                    </li>
+                    <li class="filter-list-item">
+                        <input type="checkbox" id="desktop-material-steel" value="steel" class="filter-input">
+                        <label for="desktop-material-steel" class="filter-label">Steel</label>
+                    </li>
+                    <li class="filter-list-item">
+                        <input type="checkbox" id="desktop-material-glass" value="tempered-glass" class="filter-input">
+                        <label for="desktop-material-glass" class="filter-label">Tempered Glass</label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="filter-category">
+            <h3 class="filter-title">Operating System</h3>
+            <div class="filter-options filter-options--radio-list">
+                <ul class="filter-list">
+                    <li class="filter-list-item">
+                        <input type="radio" name="desktop-operating-system" id="desktop-os-windows" value="windows" class="filter-input">
+                        <label for="desktop-os-windows" class="filter-label">Windows</label>
+                    </li>
+                    <li class="filter-list-item">
+                        <input type="radio" name="desktop-operating-system" id="desktop-os-macos" value="macos" class="filter-input">
+                        <label for="desktop-os-macos" class="filter-label">macOS</label>
+                    </li>
+                    <li class="filter-list-item">
+                        <input type="radio" name="desktop-operating-system" id="desktop-os-linux" value="linux" class="filter-input">
+                        <label for="desktop-os-linux" class="filter-label">Linux (Pre-installed)</label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="filter-category">
+            <h3 class="filter-title">Processor</h3>
+            <div class="filter-options filter-options--radio-list">
+                <ul class="filter-list">
+                    <li class="filter-list-item"><input type="radio" name="desktop-processor" id="desktop-proc-i3" value="i3" class="filter-input"><label for="desktop-proc-i3" class="filter-label">Intel Core i3</label></li>
+                    <li class="filter-list-item"><input type="radio" name="desktop-processor" id="desktop-proc-i5" value="i5" class="filter-input"><label for="desktop-proc-i5" class="filter-label">Intel Core i5</label></li>
+                    <li class="filter-list-item"><input type="radio" name="desktop-processor" id="desktop-proc-i7" value="i7" class="filter-input"><label for="desktop-proc-i7" class="filter-label">Intel Core i7</label></li>
+                    <li class="filter-list-item"><input type="radio" name="desktop-processor" id="desktop-proc-i9" value="i9" class="filter-input"><label for="desktop-proc-i9" class="filter-label">Intel Core i9</label></li>
+                    <li class="filter-list-item"><input type="radio" name="desktop-processor" id="desktop-proc-ryzen5" value="ryzen5" class="filter-input"><label for="desktop-proc-ryzen5" class="filter-label">AMD Ryzen 5</label></li>
+                    <li class="filter-list-item"><input type="radio" name="desktop-processor" id="desktop-proc-ryzen7" value="ryzen7" class="filter-input"><label for="desktop-proc-ryzen7" class="filter-label">AMD Ryzen 7</label></li>
+                    <li class="filter-list-item"><input type="radio" name="desktop-processor" id="desktop-proc-ryzen9" value="ryzen9" class="filter-input"><label for="desktop-proc-ryzen9" class="filter-label">AMD Ryzen 9</label></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="filter-category">
+            <h3 class="filter-title">Graphics Card</h3>
+            <div class="filter-options filter-options--radio-list">
+                <ul class="filter-list">
+                    <li class="filter-list-item">
+                        <input type="radio" name="desktop-graphics-card" id="desktop-gpu-integrated" value="integrated" class="filter-input">
+                        <label for="desktop-gpu-integrated" class="filter-label">Integrated Graphics</label>
+                    </li>
+                    <li class="filter-list-item">
+                        <input type="radio" name="desktop-graphics-card" id="desktop-gpu-dedicated" value="dedicated" class="filter-input">
+                        <label for="desktop-gpu-dedicated" class="filter-label">Dedicated Graphics</label>
+                    </li>
+                    <li class="filter-list-item">
+                        <input type="radio" name="desktop-graphics-card" id="desktop-gpu-high-end" value="high-end" class="filter-input">
+                        <label for="desktop-gpu-high-end" class="filter-label">High-End Dedicated (RTX/RX)</label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="filter-category">
+            <h3 class="filter-title">RAM</h3>
+            <div class="filter-options filter-options--select">
+                <select id="desktop-ram-filter" class="filter-select">
+                    <option value="">Any</option>
+                    <option value="8gb">8GB</option>
+                    <option value="16gb">16GB</option>
+                    <option value="32gb">32GB</option>
+                    <option value="64gb">64GB+</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="filter-category">
+            <h3 class="filter-title">Storage</h3>
+            <div class="filter-options filter-options--select-group">
+                <select id="desktop-storage-type-filter" class="filter-select">
+                    <option value="">Any Type</option>
+                    <option value="ssd">SSD</option>
+                    <option value="hdd">HDD</option>
+                    <option value="sshd">SSHD (Hybrid)</option>
+                </select>
+                <select id="desktop-storage-capacity-filter" class="filter-select">
+                    <option value="">Any Capacity</option>
+                    <option value="256gb">256GB SSD</option>
+                    <option value="512gb">512GB SSD</option>
+                    <option value="1tb-ssd">1TB SSD</option>
+                    <option value="1tb-hdd">1TB HDD</option>
+                    <option value="2tb-hdd">2TB HDD</option>
+                    <option value="4tb-plus">4TB+ HDD</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="filter-category">
+            <h3 class="filter-title">Monitor Size</h3>
+            <div class="filter-options filter-options--checkbox-list">
+                <ul class="filter-list">
+                    <li class="filter-list-item"><input type="checkbox" id="desktop-screen-21" value="21" class="filter-input"><label for="desktop-screen-21" class="filter-label">Up to 21 inches</label></li>
+                    <li class="filter-list-item"><input type="checkbox" id="desktop-screen-24" value="24" class="filter-input"><label for="desktop-screen-24" class="filter-label">22 - 24 inches</label></li>
+                    <li class="filter-list-item"><input type="checkbox" id="desktop-screen-27" value="27" class="filter-input"><label for="desktop-screen-27" class="filter-label">25 - 27 inches</label></li>
+                    <li class="filter-list-item"><input type="checkbox" id="desktop-screen-28plus" value="28+" class="filter-input"><label for="desktop-screen-28plus" class="filter-label">28+ inches</label></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="filter-category filter-category--actions">
+            <button type="submit" class="filter-button filter-button--apply">Apply Filters</button>
+            <button type="reset" class="filter-button filter-button--clear">Clear Filters</button>
+        </div>
+
+    </aside>
+
+    <div id="general_display">
+        <div class="shop_item desktop">
+            <img alt="desktop image" src="dell-desktops-at-europc.webp">
+            <h3>Dell OptiPlex 7000 Series Business Desktop, Intel Core i7, 16GB RAM, 512GB SSD, Windows 11 Pro</h3>
+            <p>KSh <span class="price">95,000</span></p>
+            <div class="shopping_buttons_container">
+                <button class="shopping_actions" type="submit">customize</button>
+                <button class="shopping_actions" type="submit">add to cart</button>
+                <button class="shopping_actions" type="submit">view details</button>
+                <button class="shopping_actions" type="submit">buy now</button>
+            </div>
+            <div class="promotion_offer_badge">
+                <p>10% off</p>
+            </div>
+        </div>
+
+        <div class="shop_item desktop">
+            <img alt="desktop image" src="IMAGES/cpp-showcase-banner-720x400.avif">
+            <h3>HP Pavilion Gaming Desktop, AMD Ryzen 7, NVIDIA RTX 3060, 32GB RAM, 1TB NVMe SSD, Windows 11 Home</h3>
+            <p>KSh <span class="price">185,000</span></p>
+            <div class="shopping_buttons_container">
+                <button class="shopping_actions" type="submit">customize</button>
+                <button class="shopping_actions" type="submit">add to cart</button>
+                <button class="shopping_actions" type="submit">view details</button>
+                <button class="shopping_actions" type="submit">buy now</button>
+            </div>
+            <div class="promotion_offer_badge">
+                <p>Free Keyboard & Mouse</p>
+            </div>
+        </div>
+
+        <div class="shop_item desktop">
+            <img alt="desktop image" src="IMAGES/desketops.avif">
+            <h3>Lenovo IdeaCentre AIO 5i, Intel Core i5, 8GB RAM, 256GB SSD, 23.8" FHD Touch, Windows 11 Home</h3>
+            <p>KSh <span class="price">78,000</span></p>
+            <div class="shopping_buttons_container">
+                <button class="shopping_actions" type="submit">customize</button>
+                <button class="shopping_actions" type="submit">add to cart</button>
+                <button class="shopping_actions" type="submit">view details</button>
+                <button class="shopping_actions" type="submit">buy now</button>
+            </div>
+            <div class="promotion_offer_badge">
+                <p>5% discount</p>
+            </div>
+        </div>
+
+        <div class="shop_item desktop">
+            <img alt="desktop image" src="IMAGES/desketops.avif">
+            <h3>Apple Mac Mini M2, 8-Core CPU, 10-Core GPU, 8GB Unified Memory, 256GB SSD, macOS Ventura</h3>
+            <p>KSh <span class="price">120,000</span></p>
+            <div class="shopping_buttons_container">
+                <button class="shopping_actions" type="submit">customize</button>
+                <button class="shopping_actions" type="submit">add to cart</button>
+                <button class="shopping_actions" type="submit">view details</button>
+                <button class="shopping_actions" type="submit">buy now</button>
+            </div>
+            <div class="promotion_offer_badge">
+                <p>New Arrival</p>
+            </div>
+        </div>
+
+        <div class="shop_item desktop">
+            <img alt="desktop image" src="IMAGES/desketops.avif">
+            <h3>Acer Predator Orion 3000, Intel Core i7, GeForce RTX 4070, 16GB RAM, 1TB SSD, Windows 11 Home</h3>
+            <p>KSh <span class="price">250,000</span></p>
+            <div class="shopping_buttons_container">
+                <button class="shopping_actions" type="submit">customize</button>
+                <button class="shopping_actions" type="submit">add to cart</button>
+                <button class="shopping_actions" type="submit">view details</button>
+                <button class="shopping_actions" type="submit">buy now</button>
+            </div>
+            <div class="promotion_offer_badge">
+                <p>Limited Stock</p>
+            </div>
+        </div>
+
+        <div class="shop_item desktop">
+            <img alt="desktop image" src="IMAGES/desketops.avif">
+            <h3>HP Z2 Mini G9 Workstation, Intel Core i9, NVIDIA RTX A2000, 64GB RAM, 2TB NVMe SSD, Windows 11 Pro</h3>
+            <p>KSh <span class="price">420,000</span></p>
+            <div class="shopping_buttons_container">
+                <button class="shopping_actions" type="submit">customize</button>
+                <button class="shopping_actions" type="submit">add to cart</button>
+                <button class="shopping_actions" type="submit">view details</button>
+                <button class="shopping_actions" type="submit">buy now</button>
+            </div>
+            <div class="promotion_offer_badge">
+                <p>Professional Grade</p>
+            </div>
+        </div>
+
+        <div class="shop_item desktop">
+            <img alt="desktop image" src="IMAGES/desketops.avif">
+            <h3>Dell Inspiron 3000 Compact Desktop, Intel Core i3, 8GB RAM, 1TB HDD, Windows 11 Home</h3>
+            <p>KSh <span class="price">45,000</span></p>
+            <div class="shopping_buttons_container">
+                <button class="shopping_actions" type="submit">customize</button>
+                <button class="shopping_actions" type="submit">add to cart</button>
+                <button class="shopping_actions" type="submit">view details</button>
+                <button class="shopping_actions" type="submit">buy now</button>
+            </div>
+            <div class="promotion_offer_badge">
+                <p>Budget Friendly</p>
+            </div>
+        </div>
+    </div>
+</main>
+<footer class="main-footer">
+    <div class="footer-content">
+        <div class="footer-section footer-about">
+            <h3>Tsailun Technologies</h3>
+            <p>Quality refurbished laptops and custom builds in Nairobi. Smart tech choices for a smarter planet.</p>
+            <p>Located at Imenti House, Basement Shop No. 14, Tom Mboya Street, Nairobi.</p>
+        </div>
+        <div class="footer-section footer-links">
+            <h3>Quick Links</h3>
+            <ul class="footer-list">
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="warranty.html">Warranty & Returns</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+            </ul>
+        </div>
+        <div class="footer-section footer-nav">
+            <h3>Shop Categories</h3>
+            <ul class="footer-list">
+                <li><a href="laptops.html">Laptops</a></li>
+                <li><a href="softwaress.html">Softwares</a></li>
+                <li><a href="desktops.html">Desktops</a></li>
+                <li><a href="accessories.html">Accessories</a></li>
+                <li><a href="iphones.html">Refurbished iPhones</a></li>
+                <li><a href="repairs.html">Diagnosis And Repair</a></li>
+            </ul>
+        </div>
+        <div class="footer-section footer-contact">
+            <h3>Get in Touch</h3>
+            <p>Email: <a href="mailto:tsailunenterprises@gmail.com">tsailunenterprises@gmail.com</a></p>
+            <p>Phone: <a href="tel:+254784289162">+254 784289162</a></p>
+            <div class="social-links">
+                <a href="#" class="social-icon">Facebook</a> 
+                <a href="#" class="social-icon">Instagram</a>
+                <a href="#" class="social-icon">Twitter</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Your Tsailun Technologies. All rights reserved.</p>
+    </div>
+</footer>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const navToggle = document.getElementById("nav-toggle");
+  const navList = document.getElementById("nav-list");
+  const laptopLink = document.getElementById("laptopLink");
+  const laptopDropdown = document.getElementById("laptopsDropdownMenu");
+
+  // Mobile menu toggle
+  navToggle.addEventListener("click", () => {
+    navList.classList.toggle("active");
+    navToggle.setAttribute(
+      "aria-expanded",
+      navList.classList.contains("active")
+    );
+  });
+
+  // Mobile laptops dropdown toggle
+  laptopLink.addEventListener("click", (e) => {
+    if (window.innerWidth < 769) {
+      e.preventDefault();
+      laptopDropdown.toggleAttribute("hidden");
+    }
+  });
+});
+</script>
+</body>
+</html>
